@@ -152,17 +152,17 @@ const Services = ({ siteContent }) => {
   }, []);
 
   return (
-    <Box id="services" ref={sectionRef} className="premium-section premium-section--tint" sx={{ py: { xs: 6.5, md: 8.5 }, position: 'relative' }}>
+    <Box id="services" ref={sectionRef} className="premium-section premium-section--tint" sx={{ py: { xs: 6.5, md: 3.5 }, position: 'relative' }}>
       <Container maxWidth={false} sx={{ px: { xs: 2, md: 4 } }}>
         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'minmax(0, 1fr) auto' }, gap: 2, alignItems: 'end', mb: 3 }}>
-          <Box sx={{ maxWidth: 760 }}>
-            <Typography className="services-heading" sx={{ color: 'primary.main', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', mb: 1, fontSize: '0.8rem' }}>
+          <Box sx={{ maxWidth: '83%' }}>
+            {/* <Typography className="services-heading" sx={{ color: 'primary.main', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', mb: 1, fontSize: '0.8rem' }}>
               {services.eyebrow}
-            </Typography>
-            <Typography className="services-heading section-title" variant="h2" sx={{ mb: 1.4, fontSize: { xs: '2rem', md: '3.3rem' }, '& .gsap-title-word': { display: 'inline-block', transformOrigin: '0% 100%' } }}>
+            </Typography> */}
+            <Typography className="services-heading " variant="h2" sx={{ mb: 1.4, fontSize: { xs: '2rem', md: '3.3rem' }, '& .gsap-title-word': { display: 'inline-block', transformOrigin: '0% 100%' } }}>
               {services.title}
             </Typography>
-            <Typography className="services-heading" variant="body1" sx={{ color: 'text.secondary', maxWidth: 640 }}>
+            <Typography className="services-heading" variant="body1" sx={{ color: 'text.secondary', maxWidth: '100%' }}>
               {services.description}
             </Typography>
           </Box>
@@ -202,8 +202,8 @@ const Services = ({ siteContent }) => {
                   sx={{
                     position: 'relative',
                     overflow: 'hidden',
-                    flex: { xs: '0 0 88%', sm: '0 0 62%', md: '0 0 36%' },
-                    minHeight: 320,
+                    flex: { xs: '0 0 88%', sm: '0 0 62%', md: '0 0 32%' },
+                    minHeight: 370,
                     scrollSnapAlign: 'start',
                     borderRadius: 2,
                   }}
@@ -211,31 +211,31 @@ const Services = ({ siteContent }) => {
                   <CardAccentSvg variant={index % 2 === 0 ? 'arc' : 'grid'} />
                   <CardContent sx={{ p: 2.6, display: 'flex', flexDirection: 'column', height: '100%' }}>
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 1.5, mb: 1.6 }}>
-                      <Box sx={{ width: 48, height: 48, borderRadius: 1.5, display: 'grid', placeItems: 'center', bgcolor: 'rgba(31, 74, 59, 0.08)', color: 'primary.main' }}>
-                        <Icon />
+                      <Box sx={{ width: 500, height: 48,p: 1.5, borderRadius: 1.5, display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'minmax(0.5em, 1fr) auto' }, placeItems: 'left', bgcolor: 'rgba(3, 18, 13, 0.08)', color: 'primary.main' }}>
+                        <Typography variant="h5" sx={{ mb: 1, fontSize: { xs: '1.22rem', md: '1.36rem' }}}>
+                           <Icon /> {service.title}
+                        </Typography>
+                    
                       </Box>
                       <Typography sx={{ color: 'rgba(38, 66, 54, 0.3)', fontWeight: 800, fontSize: '0.95rem' }}>
                         0{index + 1}
                       </Typography>
                     </Box>
-                    <Typography variant="h5" sx={{ mb: 0.9, fontSize: { xs: '1.22rem', md: '1.36rem' }, lineHeight: 1.18 }}>
-                      {service.title}
-                    </Typography>
                     <Typography variant="body2" sx={{ color: 'primary.main', fontWeight: 700, mb: 1.1 }}>
                       {service.tagline}
                     </Typography>
-                    <Typography variant="body2" sx={{ color: 'text.secondary', mb: 1.8, lineHeight: 1.6 }}>
+                    <Typography variant="body2" sx={{ color: 'text.secondary', mb: 3, lineHeight: 1.6 }}>
                       {service.description}
                     </Typography>
                     <Box sx={{ mt: 'auto' }}>
-                      <Box sx={{ display: 'flex', gap: 1, mb: 1.4, flexWrap: 'wrap' }}>
+                      <Box sx={{ display: 'flex', gap: 1, mb: 1.8, flexWrap: 'wrap' }}>
                         <Chip label={service.rate} size="small" sx={{ fontWeight: 700, bgcolor: 'rgba(31, 74, 59, 0.08)', color: 'primary.main' }} />
                         <Chip label={service.duration} size="small" variant="outlined" sx={{ fontWeight: 600 }} />
                       </Box>
                       <Typography variant="caption" sx={{ display: 'block', color: 'text.secondary', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', mb: 0.45 }}>
                         Best for
                       </Typography>
-                      <Typography variant="body2" sx={{ color: 'text.secondary', mb: 1.5 }}>
+                      <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2 }}>
                         {service.bestFor}
                       </Typography>
                       <Button variant="outlined" href="#contact">

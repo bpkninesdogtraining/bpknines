@@ -7,17 +7,29 @@ import gsap from 'gsap';
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
-import heroImg from '../assets/highlight-action-dogs.jpeg';
+import heroImg from '../assets/bpkninesgrad.jpg';
+import heroBpknineGrad from '../assets/doggrads1.png';
+import heroBpknineBlack from '../assets/bpknineslogoblackbg.jpg';
 import highlightOwnerGsdImg from '../assets/highlight-owner-gsd.jpeg';
 import highlightPhDogPathImg from '../assets/highlight-ph-dog-path.jpeg';
 import highlightPhPupImg from '../assets/highlight-ph-pup.jpeg';
 import { TITLE_REVEAL_EASE } from '../utils/titleFx';
+import PhoneIcon from '@mui/icons-material/Phone';
+import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
+import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
+import IconButton from "@mui/material/IconButton";
+import PetsIcon from '@mui/icons-material/Pets';
+import trainmemory1 from '../assets/trainmemory1.jpg';
+import trainmemory2 from '../assets/trainmemory2.jpg';
+import trainmemory3 from '../assets/trainmemory3.jpg';
+import trainmemory4 from '../assets/trainmemory4.jpg';
+
 
 gsap.registerPlugin(ScrollTrigger, SplitText, MotionPathPlugin);
 
 const Hero = ({ siteContent }) => {
   const heroRef = useRef(null);
-  const { hero } = siteContent;
+  const { hero, contact } = siteContent;
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -289,9 +301,25 @@ const Hero = ({ siteContent }) => {
                 pointerEvents: 'none',
               }}
             />
-            <Typography className="hero-kicker" sx={{ display: 'inline-flex', px: { xs: 1.35, md: 2 }, py: { xs: 0.7, md: 1 }, borderRadius: 2.5, bgcolor: 'rgba(241, 209, 27, 0.14)', color: 'primary.main', border: '1px solid rgba(241, 209, 27, 0.22)', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', fontSize: { xs: '0.68rem', md: '0.76rem' }, mb: { xs: 1.6, md: 3 } }}>
+            <Typography className="hero-kicker" sx={{ display:'inline-flex', mt:1,px: { xs: 1.35, md: 2 }, py: { xs: 0.7, md: 0.7 }, borderRadius: 2.5, bgcolor: 'rgba(241, 209, 27, 0.14)', color: 'primary.main', border: '1px solid rgba(241, 209, 27, 0.22)', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', fontSize: { xs: '0.4rem', md: '0.76rem' }, mb: { xs: 1.6, md: 1 } }}>
               {hero.eyebrow}
             </Typography>
+            <Box sx={{ display: { xs: 'block', md: 'none' }, position: 'fixed', bottom: 0, left: 0, right: 0, width:'100%',  zIndex: 1100,bgcolor: 'rgb(84, 97, 8)', border: '1px solid rgba(31, 74, 59, 0.22)' }}>
+              <Typography className="hero-kicker" sx={{ textAlign: 'center' , borderRadius: 2.5, bgcolor: 'rgba(241, 209, 27, 0.35)', color: 'black', border: '1px solid rgba(241, 209, 27, 0.22)', fontWeight: 750, letterSpacing: '0.08em', textTransform: 'uppercase', fontSize: { xs: '1rem'}, mb:1, mt:1 }}>
+                 <IconButton component="a" href={`tel:${contact.phone}`} sx={{ color: "black",fontSize: { xs: '0.9em'} }}>
+                    <PetsIcon sx={{ fontSize: { xs: '1.7em'},  textShadow: '2px 2px 4px rgba(255, 255, 255, 0.9)',color: "yellow",textAlign: 'center' }} />
+                      Click to Call  {contact.phone}
+                    <PetsIcon sx={{ fontSize: { xs: '1.7em'},  textShadow: '2px 2px 4px rgba(255, 255, 255, 0.9)',color: "yellow",textAlign: 'center' }} />  
+                  </IconButton>
+              </Typography>
+            </Box>
+            <Box sx={{ display: { xs: 'none', md: 'block' }, position: 'fixed', bottom: 0, left: 0, right: 0, width:'100%',  zIndex: 10000,bgcolor: 'rgb(84, 97, 8)', border: '1px solid rgba(31, 74, 59, 0.22)' }}>
+              <Typography className="hero-kicker" sx={{ textAlign: 'center',textShadow: '2px 2px 2px rgba(239, 245, 150, 0.3)', borderRadius: 2.5, bgcolor: 'rgba(241, 209, 27, 0.35)', textDecorationColor: 'yellow', border: '1px solid rgba(241, 209, 27, 0.22)', fontWeight: 900, letterSpacing: '0.08em', textTransform: 'uppercase', fontSize: '1.5rem', mb:1, mt:1 }}>
+                 <IconButton component="a" href={`tel:${contact.phone}`} sx={{ color: "black",fontSize: { md: '0.9em'} }}>
+                    <PetsIcon sx={{ fontSize: { md: '2em'}, textShadow: '2px 2px 4px rgba(255, 255, 255, 0.9)',color: "yellow",textAlign: 'center'  }} />Schedule your FREE Consultation or Call Us @ {contact.phone} !<PetsIcon sx={{ fontSize: { md: '2em'}, color: "yellow", textAlign: 'center'  }} />
+                  </IconButton>
+              </Typography>
+            </Box>
             <Box
               className="hero-headline-shell premium-panel"
               sx={{
@@ -306,6 +334,7 @@ const Hero = ({ siteContent }) => {
                 overflow: 'hidden',
               }}
             >
+
               <Box className="hero-orbit-paths" sx={{ position: 'absolute', inset: 0, pointerEvents: 'none' }} aria-hidden="true">
                 <svg viewBox="0 0 840 300" width="100%" height="100%">
                   <path className="hero-orbit-path-a" d="M80 168 C 200 82, 438 78, 684 130 C 760 146, 776 180, 742 206 C 668 262, 340 266, 136 232 C 50 218, 26 194, 80 168" fill="none" stroke="transparent" />
@@ -327,20 +356,8 @@ const Hero = ({ siteContent }) => {
                   mixBlendMode: 'screen',
                 }}
               />
-              <Box className="hero-headline-rule" sx={{ width: { xs: 92, md: 148 }, height: 2, borderRadius: 999, background: 'linear-gradient(90deg, rgba(94,115,21,0.92) 0%, rgba(165,189,69,0.76) 58%, rgba(241,209,27,0.74) 100%)', mb: { xs: 1.05, md: 2 } }} />
-              <Box className="hero-headline-path-wrap" sx={{ position: 'relative', width: { xs: 124, md: 210 }, height: { xs: 12, md: 18 }, mb: { xs: 0.95, md: 1.8 } }}>
-                <svg viewBox="0 0 210 18" width="100%" height="100%" aria-hidden="true">
-                  <path
-                    className="hero-headline-path-stroke"
-                    d="M2 9 C 56 9, 74 2, 108 2 C 138 2, 154 12, 208 12"
-                    fill="none"
-                    stroke="rgba(94,115,21,0.35)"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                  />
-                </svg>
-              </Box>
-              <Typography variant="h1" sx={{ fontSize: { xs: 'clamp(1.68rem, 7.4vw, 2.28rem)', sm: 'clamp(2.25rem, 7vw, 3.2rem)', md: 'clamp(4.05rem, 6.6vw, 5.1rem)' }, lineHeight: { xs: 0.98, md: 0.93 }, letterSpacing: { xs: '-0.05em', md: '-0.058em' }, textShadow: '0 1px 0 rgba(255,255,255,0.6)', mb: 0 }}>
+
+              <Typography variant="h1" sx={{ fontFamily:'Roboto',fontSize: { xs: 'clamp(1.68rem, 7.4vw, 2.28rem)', sm: 'clamp(2.25rem, 7vw, 3.2rem)', md: 'clamp(4.05rem, 6.6vw, 3.1rem)' }, lineHeight: { xs: 1, md: 1.07 }, letterSpacing: { xs: '-0.05em', md: '-0.058em' }, textShadow: '0 1px 0 rgba(255,255,255,0.6)' }}>
                 {hero.lines.map((line) => (
                   <Box
                     key={line}
@@ -349,7 +366,7 @@ const Hero = ({ siteContent }) => {
                       display: 'block',
                       overflow: 'visible',
                       color: 'text.primary',
-                      py: { xs: 0.06, md: 0.14 },
+                      py: { xs: 0.06, md: 0 },
                     }}
                   >
                     <Box
@@ -369,10 +386,7 @@ const Hero = ({ siteContent }) => {
                 ))}
               </Typography>
             </Box>
-            <Typography className="hero-copy" variant="body1" sx={{ color: 'text.secondary', fontSize: { xs: '0.95rem', md: '1.15rem' }, lineHeight: { xs: 1.45, md: 1.6 }, maxWidth: 620, mb: { xs: 1.6, md: 4 } }}>
-              {hero.description}
-            </Typography>
-            <Box className="hero-divider" sx={{ width: { xs: 96, md: 168 }, height: 2, borderRadius: 999, background: 'linear-gradient(90deg, rgba(94,115,21,0.92) 0%, rgba(165,189,69,0.76) 58%, rgba(241,209,27,0.74) 100%)', mb: { xs: 1.4, md: 3.5 } }} />
+             
             <Box className="hero-actions" sx={{ display: 'flex', gap: 1.2, flexWrap: { xs: 'nowrap', md: 'wrap' }, mb: { xs: 1.25, md: 3.5 } }}>
               <Button variant="contained" href={hero.primaryCta.href} size="small" sx={{ flex: { xs: 1, md: '0 0 auto' }, minHeight: { xs: 42, md: 48 }, px: { xs: 1.4, md: 2.2 }, fontSize: { xs: '0.86rem', md: '0.95rem' }, whiteSpace: 'nowrap' }}>
                 {hero.primaryCta.label}
@@ -381,13 +395,20 @@ const Hero = ({ siteContent }) => {
                 {hero.secondaryCta.label}
               </Button>
             </Box>
-            <Typography className="hero-copy" sx={{ color: 'text.secondary', maxWidth: 540, mb: { xs: 1.25, md: 4 }, display: { xs: 'none', md: 'block' } }}>
-              {hero.note}
-            </Typography>
-            <Typography className="hero-rotating-copy" sx={{ color: 'primary.main', fontWeight: 750, fontSize: { xs: '0.82rem', md: '1rem' }, letterSpacing: '-0.01em', mb: { xs: 1.2, md: 3.4 } }}>
-              Calm inside the home.
-            </Typography>
-            <Box sx={{ display: 'grid', gridTemplateColumns: { xs: 'repeat(3, 1fr)', sm: 'repeat(3, 1fr)' }, gap: { xs: 1, md: 2 } }}>
+            <Box className="hero-badge-card premium-panel" sx={{ mb: { xs: 2.5, md: 0 },p: 1, borderRadius: 2, bgcolor: 'rgba(253, 249, 240, 0.96)', border: '1px solid rgba(212, 178, 79, 0.18)', height:{ xs: '100%', md: 220 } }}>
+                <Typography sx={{ fontWeight: 800, fontSize: '0.84rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'primary.main', mb: 1 }}>
+                  Training Moments
+                </Typography>
+                <Box sx={{ display: 'grid', gridTemplateColumns: {xs:'repeat(3, 1fr)', md:'repeat(6, 1fr)'},  gap: 1, gridAutoRows: 'auto 1fr',  borderColor:'rgba(212, 178, 79, 0.18)', borderRadius: 1 }}>
+                  <Box className="hero-moment-photo" component="img" src={trainmemory4} alt="Owner and German Shepherd in training field" loading="lazy" decoding="async" sx={{  width: '100%', height:{ xs: '100%', md: '70%' }, objectFit: 'cover', borderRadius: 1, border: '5px solid rgba(0, 0, 0, 0.18)' }} />
+                  <Box className="hero-moment-photo" component="img" src={highlightPhDogPathImg} alt="Dog moving confidently with handler in the background" loading="lazy" decoding="async" sx={{ width: '100%',height:{ xs: '100%', md: '70%' }, objectFit: 'cover', borderRadius: 1, border: '5px solid rgba(0, 0, 0, 0.18)' }} />
+                  <Box className="hero-moment-photo" component="img" src={trainmemory1} alt="Young dog portrait during urban socialization" loading="lazy" decoding="async" sx={{display: 'block', width: '100%', height:{ xs: '100%', md: '70%' }, objectFit: 'cover', borderRadius: 1, border: '5px solid rgba(0, 0, 0, 0.18)' }} />
+                  <Box className="hero-moment-photo" component="img" src={highlightPhPupImg} alt="Young dog portrait during urban socialization" loading="lazy" decoding="async" sx={{ display: 'block',width: '100%', height:{ xs: '100%', md: '70%' }, objectFit: 'cover', borderRadius: 1,border: '5px solid rgba(0, 0, 0, 0.18)' }} />
+                  <Box className="hero-moment-photo" component="img" src={highlightOwnerGsdImg} alt="Owner and German Shepherd in training field" loading="lazy" decoding="async" sx={{ display: 'block',width: '100%', height:{ xs: '100%', md: '70%' }, objectFit: 'cover', borderRadius: 1,border: '5px solid rgba(0, 0, 0, 0.18)' }} />
+                  <Box className="hero-moment-photo" component="img" src={trainmemory3} alt="Dog moving confidently with handler in the background" loading="lazy" decoding="async" sx={{ display: 'block',width: '100%', height:{ xs: '100%', md: '70%' } , objectFit: 'cover', borderRadius: 1,border: '5px solid rgba(0, 0, 0, 0.18)' }} />
+                </Box>
+            </Box>
+            <Box sx={{ display: {xs:'grid', md:'none'}, gridTemplateColumns: { xs: 'repeat(3, 1fr)', sm: 'repeat(3, 1fr)' }, gap: { xs: 1, md: 2 } }}>
               {hero.stats.map((item) => (
                 <Box key={item.value} className="hero-stat" sx={{ p: { xs: 1.1, md: 2.5 }, borderRadius: 1.5, bgcolor: 'rgba(253, 249, 240, 0.92)', border: '1px solid rgba(212, 178, 79, 0.16)', boxShadow: '0px 8px 22px rgba(42, 62, 53, 0.05)' }}>
                   <Typography sx={{ fontSize: { xs: '0.9rem', md: '1.2rem' }, fontWeight: 800, color: 'primary.main', mb: { xs: 0.2, md: 0.5 } }}>{item.value}</Typography>
@@ -396,90 +417,14 @@ const Hero = ({ siteContent }) => {
               ))}
             </Box>
           </Box>
+           
 
-          <Box sx={{ position: 'relative' }}>
-            <Box className="hero-visual premium-media-frame" sx={{ borderRadius: 3, overflow: 'hidden', minHeight: { xs: 220, md: 620 }, position: 'relative', boxShadow: '0px 22px 58px rgba(19, 35, 29, 0.12)' }}>
-              <Box
-                className="hero-visual-inner"
-                sx={{
-                  position: 'absolute',
-                  inset: 0,
-                  transform: { xs: 'scale(1)', md: 'scale(1.06)' },
-                  backgroundImage: `linear-gradient(180deg, rgba(16, 27, 23, 0.06), rgba(16, 27, 23, 0.28)), url(${heroImg})`,
-                  backgroundSize: { xs: 'contain', md: 'cover' },
-                  backgroundRepeat: 'no-repeat',
-                  backgroundPosition: 'center',
-                  backgroundColor: '#0d140f',
-                }}
-              />
-            </Box>
-            <Box
-              className="hero-screen-panel premium-panel"
-              sx={{
-                position: { xs: 'relative', md: 'absolute' },
-                left: { md: -24 },
-                bottom: { md: 36 },
-                mt: { xs: 1.2, md: 0 },
-                width: { xs: '100%', md: 270 },
-                p: { xs: 1.35, md: 2.1 },
-                borderRadius: { xs: 2, md: 3 },
-                bgcolor: 'rgba(255,255,255,0.76)',
-                border: '1px solid rgba(255,255,255,0.74)',
-                boxShadow: '0px 22px 54px rgba(19, 35, 29, 0.10)',
-                backdropFilter: 'blur(12px)',
-                overflow: 'hidden',
-              }}
-            >
-              <Box className="hero-screen-grid" sx={{ position: 'absolute', inset: 0, opacity: 0.1, backgroundImage: 'linear-gradient(180deg, rgba(94,115,21,0.08) 0, rgba(94,115,21,0.08) 1px, transparent 1px, transparent 24px), linear-gradient(90deg, rgba(94,115,21,0.05) 0, rgba(94,115,21,0.05) 1px, transparent 1px, transparent 24px)', backgroundSize: '24px 24px' }} />
-              <Box className="hero-screen-glow" sx={{ position: 'absolute', top: -40, right: -30, width: 120, height: 120, borderRadius: '50%', background: 'radial-gradient(circle, rgba(165,189,69,0.30), rgba(165,189,69,0))', filter: 'blur(18px)', opacity: 0.58 }} />
-              <Box sx={{ position: 'relative' }}>
-                <Typography sx={{ color: 'primary.main', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', fontSize: '0.72rem', mb: 1.15 }}>
-                  Everyday progress
-                </Typography>
-                <Typography sx={{ fontWeight: 700, fontSize: { xs: '0.98rem', md: '1.2rem' }, lineHeight: 1.15, mb: 1.2 }}>
-                  Clear structure. Better choices. Calmer family life.
-                </Typography>
-                <Box sx={{ display: 'grid', gap: 0.85 }}>
-                  {[
-                    ['Home calm', 84],
-                    ['Walk focus', 76],
-                    ['Owner follow-through', 91],
-                  ].map(([label, value]) => (
-                    <Box key={label}>
-                      <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 0.45 }}>
-                        <Typography variant="caption" sx={{ color: 'text.secondary', fontWeight: 700 }}>{label}</Typography>
-                        <Typography variant="caption" sx={{ color: 'primary.main', fontWeight: 800 }}>{value}%</Typography>
-                      </Box>
-                      <Box sx={{ height: 5, borderRadius: 999, bgcolor: 'rgba(31,74,59,0.08)', overflow: 'hidden' }}>
-                        <Box sx={{ height: '100%', width: `${value}%`, borderRadius: 999, background: 'linear-gradient(90deg, rgba(94,115,21,0.92) 0%, rgba(165,189,69,0.84) 70%, rgba(241,209,27,0.88) 100%)' }} />
-                      </Box>
-                    </Box>
-                  ))}
-                </Box>
-              </Box>
-            </Box>
-            <Box sx={{ display: { xs: 'none', md: 'grid' }, gap: 2, position: { md: 'absolute' }, right: { md: -24 }, bottom: { md: 24 }, mt: { xs: 2.5, md: 0 }, width: { xs: '100%', md: 280 } }}>
-              <Box className="hero-badge-card premium-panel" sx={{ p: 2.75, borderRadius: 2, bgcolor: '#fdf9f0', border: '1px solid rgba(212, 178, 79, 0.18)', boxShadow: '0px 12px 30px rgba(19, 35, 29, 0.08)' }}>
-                <Typography sx={{ fontWeight: 800, mb: 0.5 }}>{hero.badges[0].title}</Typography>
-                <Typography variant="body2" sx={{ color: 'text.secondary' }}>{hero.badges[0].text}</Typography>
-              </Box>
-              <Box className="hero-badge-card premium-panel premium-panel--dark" sx={{ p: 2.75, borderRadius: 2, color: 'primary.contrastText', backgroundImage: 'linear-gradient(145deg, #93ad31 0%, #5e7315 100%)', boxShadow: '0px 12px 30px rgba(94, 115, 21, 0.18)' }}>
-                <Typography sx={{ fontWeight: 800, mb: 0.5 }}>{hero.badges[1].title}</Typography>
-                <Typography variant="body2" sx={{ color: 'rgba(247, 244, 238, 0.84)' }}>{hero.badges[1].text}</Typography>
-              </Box>
-              <Box className="hero-badge-card premium-panel" sx={{ p: 2.2, borderRadius: 2, bgcolor: 'rgba(253, 249, 240, 0.96)', border: '1px solid rgba(212, 178, 79, 0.18)', boxShadow: '0px 12px 30px rgba(19, 35, 29, 0.08)' }}>
-                <Typography sx={{ fontWeight: 800, fontSize: '0.84rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'primary.main', mb: 1.4 }}>
-                  Training Moments
-                </Typography>
-                <Box sx={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 1 }}>
-                  <Box className="hero-moment-photo" component="img" src={highlightOwnerGsdImg} alt="Owner and German Shepherd in training field" loading="lazy" decoding="async" sx={{ width: '100%', height: 86, objectFit: 'cover', borderRadius: 1 }} />
-                  <Box className="hero-moment-photo" component="img" src={highlightPhDogPathImg} alt="Dog moving confidently with handler in the background" loading="lazy" decoding="async" sx={{ width: '100%', height: 86, objectFit: 'cover', borderRadius: 1 }} />
-                  <Box className="hero-moment-photo" component="img" src={highlightPhPupImg} alt="Young dog portrait during urban socialization" loading="lazy" decoding="async" sx={{ width: '100%', height: 86, objectFit: 'cover', borderRadius: 1 }} />
-                </Box>
-              </Box>
+          <Box sx={{ position: 'relative'}}>
+            <Box className="hero-visual premium-media-frame" sx={{ borderRadius: 3, overflow: 'hidden', minHeight: { xs: 220, md: 590 }, position: 'relative', boxShadow: '0px 22px 58px rgba(19, 35, 29, 0.12)' }}>
+              <Box className="hero-moment-photo" component="img" src={heroImg} alt="BPKNines" loading="lazy" decoding="async" sx={{ width: '100%', objectFit: 'cover', borderRadius: 1 }} />
             </Box>
           </Box>
-        </Box>
+
         <Box className="hero-bridge" sx={{ mt: { xs: 2.2, md: 5.5 }, display: { xs: 'none', md: 'grid' }, justifyItems: 'center', gap: 1.2 }}>
           <Typography sx={{ color: 'text.secondary', fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.08em', textTransform: 'uppercase' }}>
             Scroll to the story
@@ -487,6 +432,7 @@ const Hero = ({ siteContent }) => {
           <Box className="hero-bridge-line" sx={{ width: { xs: 110, md: 180 }, height: 2, borderRadius: 999, bgcolor: 'rgba(94,115,21,0.14)', position: 'relative', overflow: 'hidden' }}>
             <Box sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(90deg, rgba(94,115,21,0.92) 0%, rgba(165,189,69,0.8) 58%, rgba(241,209,27,0.76) 100%)', opacity: 0.82 }} />
           </Box>
+        </Box>
         </Box>
       </Container>
     </Box>

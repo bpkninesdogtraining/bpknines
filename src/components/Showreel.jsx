@@ -16,8 +16,8 @@ gsap.registerPlugin(ExpoScaleEase, Flip, CSSRulePlugin, ScrollTrigger);
 const photoLoaders = import.meta.glob('../assets/Photos/*.{jpg,jpeg,png,webp}', {
   import: 'default',
 });
-const SHOWREEL_SIZE = 10;
-const AUTO_SLIDE_MS = 1200;
+const SHOWREEL_SIZE = 5;
+const AUTO_SLIDE_MS = 3200;
 const SHOWREEL_STORIES = [
   {
     title: 'Calmer walks start here',
@@ -509,7 +509,7 @@ const Showreel = () => {
         >
           <Box className="showreel-screen-grid" sx={{ position: 'absolute', inset: 0, opacity: 0.15, backgroundImage: 'linear-gradient(180deg, rgba(31,74,59,0.08) 0, rgba(31,74,59,0.08) 1px, transparent 1px, transparent 28px), linear-gradient(90deg, rgba(31,74,59,0.05) 0, rgba(31,74,59,0.05) 1px, transparent 1px, transparent 28px)', backgroundSize: '28px 28px' }} />
           <Box sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,255,255,0.40) 0%, rgba(255,255,255,0.04) 58%, rgba(31,74,59,0.08) 100%)' }} />
-          <Box sx={{ position: 'relative', display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1.05fr 0.95fr' }, gap: 2.5, alignItems: 'center' }}>
+          <Box sx={{ position: 'relative', display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1.5fr 0.95fr' }, gap: 2.5, alignItems: 'center' }}>
             <Box>
               <Typography sx={{ color: 'primary.main', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', fontSize: '0.76rem', mb: 1 }}>
                 Results overview
@@ -517,7 +517,7 @@ const Showreel = () => {
               <Typography sx={{ fontSize: { xs: '1.35rem', md: '1.9rem' }, lineHeight: 1.08, fontWeight: 700, mb: 1 }}>
                 A cleaner look at training progress across real sessions.
               </Typography>
-              <Typography variant="body2" sx={{ color: 'text.secondary', maxWidth: 620 }}>
+              <Typography variant="body2" sx={{ color: 'text.secondary', maxWidth: 650 }}>
                 This gallery is framed like a premium screen so the proof feels deliberate, structured, and easier to browse.
               </Typography>
             </Box>
@@ -543,7 +543,7 @@ const Showreel = () => {
         <Typography className="showreel-heading" variant="h2" sx={{ fontSize: { xs: '2.25rem', md: '3.5rem' }, lineHeight: 1.03, mb: 1.5 }}>
           Proof from real training sessions
         </Typography>
-        <Typography className="showreel-heading" variant="body1" sx={{ color: 'text.secondary', maxWidth: 760 }}>
+        <Typography className="showreel-heading" variant="body1" sx={{ color: 'text.secondary', maxWidth: 900 }}>
           See how clear structure, better timing, and owner guidance translate into calmer behavior and more confident handling.
         </Typography>
       </Container>

@@ -26,7 +26,7 @@ export const siteContent = {
     },
   },
   navigation: [
-    { label: 'Programs', href: '#services' },
+    { label: 'Training Programs', href: '#services' },
     { label: 'Coach', href: '#coach-vinz' },
     { label: 'Approach', href: '#methodology' },
     { label: 'Journey', href: '#process' },
@@ -39,7 +39,7 @@ export const siteContent = {
     description:
       'Your training journey starts with understanding behavior, then building simple daily structure that creates calm at home, better walks, and confident handling.',
     note: 'Each stage is guided: assessment, clear practice, real-life proofing, and owner handoff so progress continues long after sessions end.',
-    primaryCta: { label: 'Start with a Consultation', href: '#contact' },
+    primaryCta: { label: 'Book FREE Assessment', href: '#contact' },
     secondaryCta: { label: 'See Training Programs', href: '#services' },
     badges: [
       {
@@ -54,14 +54,15 @@ export const siteContent = {
     stats: [
       { value: 'All Levels', label: 'Programs for new and experienced owners' },
       { value: 'Clear Routine', label: 'Simple daily structure for owners and dogs' },
-      { value: 'Home Confidence', label: 'Practical behavior that transfers to family life' },
+      { value: 'Confidence', label: 'Practical behavior that transfers to family life' },
     ],
   },
   services: {
-    eyebrow: 'Programs',
-    title: 'Choose the right starting point',
+    eyebrow: 'Training Programs',
+    // title: 'Choose the right starting point',
+    title: 'Training Programs',
     description:
-      'Each program is built to solve a specific stage of the journey, from first foundations to deeper behavior reset and more reliable real-life handling.',
+      'Each program is built to solve a specific stage of your dog\'s journey, from first foundations to deeper behavior reset and more reliable real-life handling.',
     items: [
       {
         title: 'Basic Obedience',
@@ -99,8 +100,8 @@ export const siteContent = {
           'Intensive Counter-Conditioning: Fundamentally changing how your dog feels about what they once feared or hated.',
         ],
         bestFor: 'Families who need expert help for high-risk or severe behavior patterns.',
-        rate: '₱35,000',
-        duration: '8 weeks',
+        rate: '₱15,000',
+        duration: 'per month',
       },
       {
         title: 'Paws & Learn Group Class',

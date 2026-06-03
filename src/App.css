@@ -16,6 +16,14 @@
     outline-offset: 2px;
   }
 }
+.herodog {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 64px;
+  }
 
 .hero {
   position: relative;

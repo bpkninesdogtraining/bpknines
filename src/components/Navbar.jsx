@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
@@ -17,7 +17,7 @@ import gsap from 'gsap';
 import { Flip } from 'gsap/Flip';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { ScrollToPlugin } from 'gsap/ScrollToPlugin';
-import logoImg from '../assets/BPK9Icons/android/mipmap-xxhdpi/ic_launcher.png';
+import logoImg from '../assets/BPK9Icons/android/mipmap-xxhdpi/bpknineslogonobg.png';
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, Flip);
 
@@ -44,22 +44,26 @@ const Navbar = ({ siteContent, currentPath = '/' }) => {
   const titleRef = useRef(null);
   const desktopNavRef = useRef(null);
   const isHomeRoute = currentPath === '/';
-  const navItems = isHomeRoute
-    ? [
-      { label: 'Programs', href: '#services' },
-      { label: 'Coach', href: '#coach-vinz' },
-      { label: 'Results', href: '#showreel' },
-      { label: 'Guides', href: '/knowledge-base' },
-      { label: 'FAQ', href: '/faq' },
-      { label: 'Contact', href: '#contact' },
-    ]
-    : [
-      { label: 'Home', href: '/' },
-      { label: 'Approach', href: '/approach' },
-      { label: 'Knowledge Base', href: '/knowledge-base' },
-      { label: 'FAQ', href: '/faq' },
-      { label: 'Contact', href: '#contact' },
-    ];
+  const navItems = useMemo(
+    () =>
+      isHomeRoute
+        ? [
+          { label: 'Training Programs', href: '#services' },
+          { label: 'Coach', href: '#coach-vinz' },
+          { label: 'Results', href: '#showreel' },
+          { label: 'Guides', href: '/knowledge-base' },
+          { label: 'FAQ', href: '/faq' },
+          { label: 'Contact', href: '#contact' },
+        ]
+        : [
+          { label: 'Home', href: '/' },
+          { label: 'Approach', href: '/approach' },
+          { label: 'Knowledge Base', href: '/knowledge-base' },
+          { label: 'FAQ', href: '/faq' },
+          { label: 'Contact', href: '#contact' },
+        ],
+    [isHomeRoute]
+  );
   const messageUsHref = siteContent.contact?.primaryCta?.href || '#contact';
   const messageUsIsExternal = /^https?:\/\//.test(messageUsHref);
   const handleNavClick = (event, href, shouldCloseMobile = false) => {
@@ -220,7 +224,8 @@ const Navbar = ({ siteContent, currentPath = '/' }) => {
   return (
     <AppBar
       ref={navRef}
-      position="sticky"
+      // position="sticky"
+      position="fixed"
       elevation={0}
       sx={{
         top: 0,
@@ -246,7 +251,7 @@ const Navbar = ({ siteContent, currentPath = '/' }) => {
       <Container maxWidth={false} sx={{ px: { xs: 2, md: 4 } }}>
         <Toolbar ref={toolbarRef} disableGutters sx={{ justifyContent: 'space-between', py: 0.75, minHeight: '68px !important' }}>
           <Box className="nav-brand" sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-            <Box ref={logoRef} component="img" src={logoImg} alt={`${siteContent.brand.name} logo`} sx={{ height: 42, width: 42, borderRadius: 2.5, objectFit: 'cover' }} />
+            <Box ref={logoRef} component="img" src={logoImg} alt={`${siteContent.brand.name} logo`} sx={{ height: 50, width: 50, borderRadius: 2.5, objectFit: 'cover' }} />
             <Typography
               ref={titleRef}
               variant="h6"
@@ -254,10 +259,11 @@ const Navbar = ({ siteContent, currentPath = '/' }) => {
                 fontWeight: 650,
                 lineHeight: 1.05,
                 letterSpacing: '-0.02em',
-                fontSize: '1rem',
+                fontSize: '1.5rem',
+                color: 'black'
               }}
             >
-              Dog Training Center
+              BPKNines Dog Training Center 
             </Typography>
           </Box>
 
