@@ -2,7 +2,7 @@
   "name": "temp",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://bpkninesdogtraining.github.io/bpknines",
+  "homepage": "https://bpkninesdogtraining.github.io/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
