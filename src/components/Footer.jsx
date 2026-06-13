@@ -259,9 +259,11 @@ const Footer = ({ siteContent }) => {
               <Box>
                 <Typography sx={{ color: 'primary.main', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', fontSize: '0.76rem', mb: 1.25 }}>
                   Clear next steps
+                 
                 </Typography>
                 <Typography variant="h3" sx={{ fontSize: '2.45rem', lineHeight: 1.02, mb: 1.5 }}>
                   Message the team and get a calm, practical starting plan.
+                  
                 </Typography>
                 <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: 560 }}>
                   Share what is happening with your dog and we will guide you to the simplest next step, whether that means obedience, behavior reset, or a more focused coaching setup.

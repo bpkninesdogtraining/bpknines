@@ -39,7 +39,7 @@ export const siteContent = {
     description:
       'Your training journey starts with understanding behavior, then building simple daily structure that creates calm at home, better walks, and confident handling.',
     note: 'Each stage is guided: assessment, clear practice, real-life proofing, and owner handoff so progress continues long after sessions end.',
-    primaryCta: { label: 'Book FREE Assessment', href: '#contact' },
+    primaryCta: { label: 'Book FREE Assessment', href: '#book_assessment' },
     secondaryCta: { label: 'See Training Programs', href: '#services' },
     badges: [
       {
@@ -65,7 +65,7 @@ export const siteContent = {
       'Each program is built to solve a specific stage of your dog\'s journey, from first foundations to deeper behavior reset and more reliable real-life handling.',
     items: [
       {
-        title: 'Basic Obedience',
+        title: 'Practical Obedience',
         tagline: 'The best starting point for new dog owners.',
         description: 'Learn the core commands and daily routines that make life easier at home, during walks, and around visitors.',
         keyComponents: [
@@ -75,7 +75,7 @@ export const siteContent = {
         ],
         bestFor: 'First-time owners, puppies, and newly adopted dogs who need clear basics.',
         rate: '₱20,000',
-        duration: '6 weeks',
+        duration: '4-6 weeks',
       },
       {
         title: 'Behavior Modification',
@@ -87,6 +87,21 @@ export const siteContent = {
           'Emotional Reset: Addressing the anxiety, excitement, or frustration driving the behavior.',
         ],
         bestFor: 'Owners dealing with daily behavior issues and inconsistent obedience.',
+        rate: '₱30,000',
+        duration: '8 weeks',
+      },
+      {
+        title: 'Practical Obedience + Behavior Modification',
+        tagline: 'Build real-life obedience and targeted behavioral issues',
+        description: 'Applying the core commands, daily routines and  address minor aggression and reactivity.',
+        keyComponents: [
+          'The Big 5: Mastering Sit, Stay, Place (go-to-bed), Recall (come when called), and Loose Leash Walking.',
+          'Engagement: Teaching your dog to focus on you first, not the environment.',
+          'Nuisance Control: Targeting jumping on guests, excessive barking, counter-surfing, and door-bolting.',
+          'Impulse Control: Teaching your dog to wait for direction rather than reacting.',
+          'Emotional Reset: Addressing the anxiety, excitement, or frustration driving the behavior.',
+        ],
+        bestFor: 'Furparents with dogs who needs reliable obedience and  dealing with daily behavior issues.',
         rate: '₱25,000',
         duration: '6 weeks',
       },
@@ -356,10 +371,10 @@ export const siteContent = {
     ],
   },
   contact: {
-    location: 'Hoyo Rd., Brgy. Silang, Cavite, Philippines',
-    hours: ['Monday to Friday: 8:00 AM to 6:00 PM', 'Saturday and Sunday: Closed'],
+    location: 'Hoyo Road Lambingan Street, Brgy Tartaria, Silang, Cavite, Philippines',
+    hours: ['Monday to Saturday: 8:00 AM to 6:00 PM', 'Sunday: Closed'],
     phone: '+63 908 811 6061',
-    email: 'info@bpknines.com',
+    email: 'dogtraining@bpknines.com',
     primaryCta: { label: 'Message Us on Facebook', href: 'https://www.facebook.com/BPKNINES/?sk=messages' },
     trustNotes: [
       'Easy-to-follow coaching built for first-time dog owners.',

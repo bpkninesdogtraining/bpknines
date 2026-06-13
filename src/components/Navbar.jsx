@@ -48,6 +48,7 @@ const Navbar = ({ siteContent, currentPath = '/' }) => {
     () =>
       isHomeRoute
         ? [
+          { label: 'Home', href: '/' },
           { label: 'Training Programs', href: '#services' },
           { label: 'Coach', href: '#coach-vinz' },
           { label: 'Results', href: '#showreel' },
@@ -250,8 +251,8 @@ const Navbar = ({ siteContent, currentPath = '/' }) => {
       />
       <Container maxWidth={false} sx={{ px: { xs: 2, md: 4 } }}>
         <Toolbar ref={toolbarRef} disableGutters sx={{ justifyContent: 'space-between', py: 0.75, minHeight: '68px !important' }}>
-          <Box className="nav-brand" sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-            <Box ref={logoRef} component="img" src={logoImg} alt={`${siteContent.brand.name} logo`} sx={{ height: 50, width: 50, borderRadius: 2.5, objectFit: 'cover' }} />
+          <Box className="nav-brand" component="a" href="/" sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
+            <Box  ref={logoRef} component="img" src={logoImg} alt={`${siteContent.brand.name} logo`} sx={{ height: 50, width: 50, borderRadius: 2.5, objectFit: 'cover' }} />
             <Typography
               ref={titleRef}
               variant="h6"

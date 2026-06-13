@@ -79,12 +79,15 @@ function navigateTo(path) {
 
 function ResourceLinks() {
   return (
-    <Box className="premium-section premium-section--tint" sx={{ py: { xs: 4.5, md: 6 }, position: 'relative' }}>
+    <Box id='book_assessment' className="premium-section premium-section--tint" sx={{ py: { xs: 4.5, md: 1 }, position: 'relative' }}>
       <Container maxWidth={false} sx={{ px: { xs: 2, md: 4 } }}>
         <Box className="premium-panel" sx={{ p: { xs: 2.2, md: 2.8 }, borderRadius: 2, border: '1px solid rgba(31, 74, 59, 0.10)' }}>
-          <Typography sx={{ color: 'primary.main', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', mb: 1, fontSize: '0.8rem' }}>
+          {/* <Typography sx={{ color: 'primary.main', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', mb: 1, fontSize: '0.8rem' }}>
             More to Explore
-          </Typography>
+          </Typography> */}
+             <iframe src="https://api.leadconnectorhq.com/widget/booking/609qxXf5ntwBICuUzu6p" style={{ width: '100%', height: 900, border: 'none', overflow: 'hidden' }} scrolling={"yes"} id={"Elmm4Ehs2CY4J8SwUQOi_1780906906673"}></iframe>
+             <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
+  
           <Typography variant="h4" sx={{ fontSize: { xs: '1.35rem', md: '1.7rem' }, lineHeight: 1.12, mb: 0.9 }}>
             Need more detail before booking?
           </Typography>
@@ -101,6 +104,7 @@ function ResourceLinks() {
             <Button variant="outlined" onClick={() => navigateTo('/knowledge-base')}>
               Open Knowledge Base
             </Button>
+           
           </Box>
         </Box>
       </Container>
