@@ -18,6 +18,7 @@ const importShowreel = () => import('./components/Showreel');
 const importTestimonials = () => import('./components/Testimonials');
 const importTeam = () => import('./components/Team');
 const importBlog = () => import('./components/Blog');
+const importEnrollment = () => import('./components/Enrollment');
 const importFAQ = () => import('./components/FAQ');
 const importFooter = () => import('./components/Footer');
 
@@ -31,6 +32,7 @@ const Testimonials = lazy(importTestimonials);
 const Blog = lazy(importBlog);
 const FAQ = lazy(importFAQ);
 const Footer = lazy(importFooter);
+const Enrollment = lazy(importEnrollment);
 
 function SectionFallback() {
   return (
@@ -240,12 +242,21 @@ function App() {
             <Suspense fallback={<SectionFallback />}>
               <Blog siteContent={siteContent} />
             </Suspense>
+          // ) : path === '/enrollment' ? (
+          //   <Suspense fallback={<SectionFallback />}>
+          //     <Enrollment siteContent={siteContent} />
+          //   </Suspense>
+            
           ) : (
             <>
               <Hero siteContent={siteContent} />
               <Suspense fallback={<SectionFallback />}>
                 <Services siteContent={siteContent} />
               </Suspense>
+              <Suspense fallback={<SectionFallback />}>
+                <Enrollment siteContent={siteContent} />
+              </Suspense>
+              
               <Suspense fallback={<SectionFallback />}>
                 <ProcessFlow siteContent={siteContent} />
               </Suspense>

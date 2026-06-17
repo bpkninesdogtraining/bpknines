@@ -41,6 +41,7 @@ export const siteContent = {
     note: 'Each stage is guided: assessment, clear practice, real-life proofing, and owner handoff so progress continues long after sessions end.',
     primaryCta: { label: 'Book FREE Assessment', href: '#book_assessment' },
     secondaryCta: { label: 'See Training Programs', href: '#services' },
+    thirdCta: { label: 'Enroll', href: '/enrollment' },
     badges: [
       {
         title: 'Step-by-step coaching',
@@ -269,6 +270,40 @@ export const siteContent = {
       },
     ],
   },
+  enrollment: {
+    title: 'Dog Enrollment Instructions',
+    description:
+      'Short reads, case-study style notes, and practical owner guidance built around the most common behavior questions we hear from families.',
+    articles: [
+      {
+        category: 'Behavior Casework',
+        title: 'What littermate conflict teaches about structure and timing',
+        excerpt: 'Complex cases involving same-age dogs highlight how hyper-attachment, rivalry, and poor boundaries can escalate without clear routines and intervention.',
+        meta: '6 minute read',
+      },
+      {
+        category: 'Leash Work',
+        title: 'Why calm walking starts before the first step',
+        excerpt: 'The quality of the walk is usually decided by arousal, pacing, and handler timing before the dog even leaves the gate.',
+        meta: '4 minute read',
+      },
+      {
+        category: 'Puppy Foundation',
+        title: 'What matters most in the first six months',
+        excerpt: 'Early neutrality, handling comfort, crate routine, and engagement shape the dog more than a long list of commands.',
+        meta: '5 minute read',
+      },
+      {
+        category: 'Behavior Reset',
+        title: 'Why obedience disappears around distractions',
+        excerpt: 'A response that only works in calm conditions has not been fully taught. Reliability comes from proofing, not hope.',
+        meta: '5 minute read',
+      },
+    ],
+    placeholderTitle: 'Placeholder for future blog feed or knowledge base',
+    placeholderText:
+      'This area can later connect to a CMS, embedded blog, or searchable resource center covering puppy preparation, behavior resets, leash reactivity, socialization, and owner FAQs.',
+  },
   journal: {
     eyebrow: 'Knowledge Base',
     title: 'Read before you book',
@@ -383,7 +418,8 @@ export const siteContent = {
     ],
     socials: [
       { label: 'Facebook', href: 'https://www.facebook.com/BPKNINES' },
-      { label: 'Messenger', href: 'https://www.facebook.com/BPKNINES/?sk=messages' },
+      // { label: 'Messenger', href: 'https://m.me/342252096852842' },
+      { label: 'Instagram', href: 'https://www.instagram.com/bpknines/' },
       { label: 'YouTube', href: 'https://www.youtube.com/@bpknines/videos' },
     ],
     hiring: {

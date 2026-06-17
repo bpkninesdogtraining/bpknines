@@ -23,6 +23,11 @@ import trainmemory1 from '../assets/trainmemory1.jpg';
 import trainmemory2 from '../assets/trainmemory2.jpg';
 import trainmemory3 from '../assets/trainmemory3.jpg';
 import trainmemory4 from '../assets/trainmemory4.jpg';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogContentText from '@mui/material/DialogContentText';
+import DialogTitle from '@mui/material/DialogTitle';
 
 
 gsap.registerPlugin(ScrollTrigger, SplitText, MotionPathPlugin);
@@ -388,12 +393,19 @@ const Hero = ({ siteContent }) => {
             </Box>
              
             <Box className="hero-actions" sx={{ display: 'flex', gap: 1.2, flexWrap: { xs: 'nowrap', md: 'wrap' }, mb: { xs: 1.25, md: 3.5 } }}>
-              <Button variant="contained" href={hero.primaryCta.href} size="small" sx={{ flex: { xs: 1, md: '0 0 auto' }, minHeight: { xs: 42, md: 48 }, px: { xs: 1.4, md: 2.2 }, fontSize: { xs: '0.86rem', md: '0.95rem' }, whiteSpace: 'nowrap' }}>
+              <Button variant="contained" href={hero.primaryCta.href} size="small" sx={{ flex: { xs: 1, md: '0 0 auto' }, minHeight: { xs: 42, md: 48 }, px: { xs: 1.4, md: 2.2 }, fontSize: { xs: '0.86rem', md: '0.95rem' }, whiteSpace: 'nowrap', color: 'secondary.contrastText', background: 'linear-gradient(135deg, #f6e06f 0%, #f1d11b 52%, #d8b300 100%)',
+                  border: '1px solid rgba(255,255,255,0.26)',
+                  boxShadow: '0px 18px 40px rgba(241, 209, 27, 0.30)',
+                  '&:hover': {
+                    background: 'linear-gradient(135deg, #f8e892 0%, #f2dc49 52%, #ddb90a 100%)',
+                    boxShadow: '0px 22px 46px rgba(241, 209, 27, 0.36)',
+                  }, }}>
                 {hero.primaryCta.label}
               </Button>
               <Button variant="outlined" href={hero.secondaryCta.href} size="small" sx={{ flex: { xs: 1, md: '0 0 auto' }, minHeight: { xs: 42, md: 48 }, px: { xs: 1.2, md: 2.2 }, fontSize: { xs: '0.86rem', md: '0.95rem' }, whiteSpace: 'nowrap' }}>
                 {hero.secondaryCta.label}
               </Button>
+              
             </Box>
             <Box className="hero-badge-card premium-panel" sx={{ mb: { xs: 2.5, md: 0 },p: 1, borderRadius: 2, bgcolor: 'rgba(253, 249, 240, 0.96)', border: '1px solid rgba(212, 178, 79, 0.18)', height:{ xs: '100%', md: 220 } }}>
                 <Typography sx={{ fontWeight: 800, fontSize: '0.84rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'primary.main', mb: 1 }}>

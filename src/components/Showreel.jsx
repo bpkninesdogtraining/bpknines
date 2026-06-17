@@ -473,7 +473,7 @@ const Showreel = () => {
     if (previousIndex !== activeIndex) {
       const outgoingTitle = carouselRef.current?.querySelector(`[data-slide-index="${previousIndex}"] .showreel-title`);
       if (outgoingTitle) {
-        gsap.fromTo(outgoingTitle, { filter: 'blur(0px)' }, { filter: 'blur(2px)', duration: 0.24, ease: 'power1.out' });
+        gsap.fromTo(outgoingTitle, { filter: 'blur(0px)' }, { filter: 'blur(0px)', duration: 0.24, ease: 'power1.out' });
       }
     }
     previousIndexRef.current = activeIndex;
@@ -609,7 +609,7 @@ const Showreel = () => {
                 position: 'relative',
                 flex: '0 0 100%',
                 scrollSnapAlign: 'center',
-                height: { xs: '56vh', md: '72vh' },
+                height: { xs: '56vh', md: '62vh' },
                 overflow: 'hidden',
                 borderRadius: 2,
                 border: '1px solid rgba(31, 74, 59, 0.12)',

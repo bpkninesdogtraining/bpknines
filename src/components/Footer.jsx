@@ -15,8 +15,8 @@ import { CustomEase } from 'gsap/CustomEase';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { TextPlugin } from 'gsap/TextPlugin';
 import CardAccentSvg from './CardAccentSvg';
-import brandLogo from '../assets/BPK9Icons/Assets.xcassets/AppIcon.appiconset/256.png';
-
+// import brandLogo from '../assets/BPK9Icons/Assets.xcassets/AppIcon.appiconset/256.png';
+import brandLogo from '../assets/bpknineslogonobg.png';
 gsap.registerPlugin(ScrollTrigger, TextPlugin, CustomEase);
 
 const socialIcons = {
@@ -199,7 +199,7 @@ const Footer = ({ siteContent }) => {
   }, []);
 
   return (
-    <Box id="contact" ref={footerRef} className="premium-section premium-section--tint" sx={{ pt: { xs: 7, md: 10 }, pb: 4, position: 'relative', zIndex: 1 }}>
+    <Box  ref={footerRef} className="premium-section premium-section--tint" sx={{ pt: { xs: 7, md: 10 }, pb: 4, position: 'relative', zIndex: 1 }}>
       <Box
         className="footer-aura"
         sx={{
@@ -214,7 +214,7 @@ const Footer = ({ siteContent }) => {
           pointerEvents: 'none',
         }}
       />
-      <Container maxWidth={false} sx={{ px: { xs: 2, md: 4 } }}>
+      <Container  maxWidth={false} sx={{ px: { xs: 2, md: 4 } }}>
         <Box className="footer-screen-shell" sx={{ position: 'relative', display: { xs: 'none', md: 'block' }, mb: 3.2, minHeight: 250 }}>
           <Box
             className="footer-screen-glow"
@@ -242,7 +242,7 @@ const Footer = ({ siteContent }) => {
               py: { md: 3.6 },
             }}
           >
-            <Box
+            <Box 
               className="footer-screen-grid"
               sx={{
                 position: 'absolute',
@@ -255,23 +255,82 @@ const Footer = ({ siteContent }) => {
               }}
             />
             <Box sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,255,255,0.50) 0%, rgba(255,255,255,0.05) 58%, rgba(31,74,59,0.08) 100%)', pointerEvents: 'none' }} />
-            <Box sx={{ position: 'relative', display: 'grid', gridTemplateColumns: '1.05fr 0.95fr', gap: 3.2, alignItems: 'center' }}>
-              <Box>
-                <Typography sx={{ color: 'primary.main', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', fontSize: '0.76rem', mb: 1.25 }}>
-                  Clear next steps
-                 
-                </Typography>
+            <Box sx={{ position: 'relative', display: 'grid', gridTemplateColumns: '1.05fr 0.55fr', gap: 3.2, alignItems: 'center' }}>
+              <Box id="contact">
                 <Typography variant="h3" sx={{ fontSize: '2.45rem', lineHeight: 1.02, mb: 1.5 }}>
-                  Message the team and get a calm, practical starting plan.
-                  
+                  Message the team or visit our training center.                  
                 </Typography>
-                <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: 560 }}>
+                <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: 700,mb: 2.5  }}>
                   Share what is happening with your dog and we will guide you to the simplest next step, whether that means obedience, behavior reset, or a more focused coaching setup.
                 </Typography>
+              <Grid container spacing={2.2}>
+                
+                <Grid size={{ xs: 12, sm: 6 }}>
+                  
+                  <Typography sx={{ fontWeight: 800, mb: 0.75 }}>Location</Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2.2 }}>
+                    {contact.location}
+                  </Typography>
+
+                  <Typography sx={{ fontWeight: 800, mb: 0.75 }}>Hours</Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                    {contact.hours.join(' | ')}
+                  </Typography>
+                </Grid>
+                <Grid size={{ xs: 12, sm: 6 }}>
+                  <Typography sx={{ fontWeight: 800, mb: 0.75 }}>Direct Contact</Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                    {contact.phone}
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2.2 }}>
+                    {contact.email}
+                  </Typography>
+
+                  <Box sx={{ display: 'flex', gap: 1.5, flexWrap: 'wrap' }}>
+                    {contact.socials.map((social) => {
+                      const Icon = socialIcons[social.label];
+                      return (
+                        <Link
+                          key={social.label}
+                          className="contact-social"
+                          href={social.href}
+                          target="_blank"
+                          rel="noreferrer"
+                          underline="none"
+                          sx={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: 0.75,
+                            px: 1.1,
+                            py: 0.7,
+                            borderRadius: 2,
+                            fontWeight: 700,
+                            color: 'text.secondary',
+                            border: '1px solid rgba(31, 74, 59, 0.14)',
+                            bgcolor: 'rgba(255, 255, 255, 0.75)',
+                            transition: 'all 0.2s ease',
+                            '&:hover': {
+                              color: 'primary.main',
+                              borderColor: 'rgba(31, 74, 59, 0.28)',
+                              bgcolor: 'rgba(255, 255, 255, 0.96)',
+                            },
+                          }}
+                        >
+                          {Icon && <Icon sx={{ fontSize: '1.05rem' }} />}
+                          {social.label}
+                        </Link>
+                      );
+                    })}
+                  </Box>
+                </Grid>
+              </Grid>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.9668646585214!2d121.00943197514455!3d14.196718586243158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd7d272e6278af%3A0xdc79ea2379faf068!2sBPKNines%20Dog%20Training%20Camp!5e0!3m2!1sen!2sph!4v1781510851040!5m2!1sen!2sph" width="780" height="400" style={{marginTop: 3, border: '3px solid #000'}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </Box>
-              <Box sx={{ justifySelf: 'end', width: '100%', maxWidth: 360 }}>
-                <Box className="premium-panel premium-panel--dark" sx={{ p: 2.2, borderRadius: 4, border: '1px solid rgba(255,255,255,0.16)' }}>
-                  <Typography sx={{ color: 'rgba(247,244,238,0.74)', fontSize: '0.74rem', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, mb: 1.1 }}>
+              
+              
+              <Box sx={{ justifySelf: 'end', width: '100%', maxWidth: 560 }}>
+                <Box className="premium-panel premium-panel--dark" sx={{ p: 2, height: 700, borderRadius: 2, border: '1px solid rgba(255,255,255,0.16)' }}>
+                  {/* <Typography sx={{ color: 'rgba(247,244,238,0.74)', fontSize: '0.74rem', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, mb: 1.1 }}>
                     Fast response
                   </Typography>
                   <Typography sx={{ color: '#f8f6f1', fontSize: '1.55rem', fontWeight: 700, lineHeight: 1.15, mb: 1.1 }}>
@@ -279,7 +338,28 @@ const Footer = ({ siteContent }) => {
                   </Typography>
                   <Typography variant="body2" sx={{ color: 'rgba(247,244,238,0.84)' }}>
                     Built for owners who want simple answers, realistic progress, and direct support.
-                  </Typography>
+                  </Typography> */}
+
+                  <iframe
+                      src="https://api.leadconnectorhq.com/widget/form/aaregL1QwyiLSkko9IwF"
+                      style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
+                      id={"inline-aaregL1QwyiLSkko9IwF" }
+                      data-layout={{'id':'INLINE'}}
+                      data-trigger-type="alwaysShow"
+                      data-trigger-value=""
+                      data-activation-type="alwaysActivated"
+                      data-activation-value=""
+                      data-deactivation-type="neverDeactivate"
+                      data-deactivation-value=""
+                      data-form-name="Contact Us"
+                      data-height="938"
+                      data-layout-iframe-id="inline-aaregL1QwyiLSkko9IwF"
+                      data-form-id="aaregL1QwyiLSkko9IwF"
+                      title="Contact Us"
+                      
+                          >
+                  </iframe>
+                  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
                 </Box>
               </Box>
             </Box>
@@ -298,6 +378,7 @@ const Footer = ({ siteContent }) => {
                   <Typography sx={{ color: 'primary.main', fontWeight: 700, fontSize: '0.9rem', letterSpacing: '-0.01em' }}>
                     Dog Training Center
                   </Typography>
+                  
                 </Box>
               </Box>
               <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2.8 }}>
@@ -325,7 +406,6 @@ const Footer = ({ siteContent }) => {
                   <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2.2 }}>
                     {contact.email}
                   </Typography>
-
                   <Box sx={{ display: 'flex', gap: 1.5, flexWrap: 'wrap' }}>
                     {contact.socials.map((social) => {
                       const Icon = socialIcons[social.label];
