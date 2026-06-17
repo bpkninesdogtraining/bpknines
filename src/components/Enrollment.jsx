@@ -224,19 +224,21 @@ const Enrollment = ({ siteContent }) => {
               bgcolor: 'rgba(255,255,255,0.72)',
               backdropFilter: 'blur(12px)',
               boxShadow: '0px 28px 70px rgba(15, 29, 24, 0.10)',
-              px: { md: 4.2 },
+              px: { xs:1,md: 4.2 },
+              pt: { xs: 3.2},
               py: { md: 4.6 },
+              pr: { xs: 2},
             }}
           >             
           <Grid container spacing={2.2}>
                 
                 <Grid size={{ xs: 12, sm: 6 }}>
-                  <Typography className="blog-heading section-title" variant="h2" sx={{ mx: 4,mb: 2.5, fontSize: { xs: '2.35rem', md: '3rem' }, '& .gsap-title-word': { display: 'inline-block', transformOrigin: '0% 100%' } }}>
+                  <Typography className="blog-heading section-title" variant="h2" sx={{ mx: 2,mb: 2.5, fontSize: { xs: '2.35rem', md: '3rem' }, '& .gsap-title-word': { display: 'inline-block', transformOrigin: '0% 100%' } }}>
                   {enrollment.title}
                   </Typography>
-                  <Typography className="blog-heading" variant="body1" sx={{ color: 'text.secondary', textAlign: 'left', maxWidth: 680, marginLeft: 5 }}>
+                  <Typography className="blog-heading" variant="body1" sx={{ color: 'text.secondary', textAlign: 'left', maxWidth: 680, marginLeft: 3 }}>
                   Thank you for choosing BPKNines Dog Training Center! <br /> <br />
-                  <ul style={{ listStyleType: 'number', paddingLeft: 20, marginTop: 0 }}>
+                  <ul style={{ listStyleType: 'number', paddingLeft: 10, marginTop: 0 }}>
                     <li> Please complete the Client Information Form </li>
                     <li> Upon submission, you will be prompted to provide Dog Information</li>
                     <li> If you are enrolling more than one dog, please submit a separate form for each dog.</li>
@@ -244,14 +246,14 @@ const Enrollment = ({ siteContent }) => {
                     <li> Review the contract carefully and if you agree to the terms, click the e-signature field to sign it and select the date signed.</li>
                   </ul>
                   </Typography>
-                 <Typography className="blog-heading section-title" variant="h3" sx={{ mx: 4,mb: 2.5, fontSize: { xs: '1.7rem', md: '2rem' }, '& .gsap-title-word': { display: 'inline-block', transformOrigin: '0% 100%' } }}>
+                 <Typography className="blog-heading section-title" variant="h3" sx={{ mx: 2,mb: 2.5, fontSize: { xs: '1.7rem', md: '2rem' }, '& .gsap-title-word': { display: 'inline-block', transformOrigin: '0% 100%' } }}>
                   Boarding & Training Requirements
                   </Typography>
-                 <Typography className="blog-heading" variant="body1" sx={{ color: 'text.secondary', textAlign: 'left', maxWidth: 680, marginLeft: 5 }}>
-                  <ul style={{ listStyleType: 'none', paddingLeft: 20, marginTop: 0 }}>
+                 <Typography className="blog-heading" variant="body1" sx={{ color: 'text.secondary', textAlign: 'left', maxWidth: 680, marginLeft: 3 }}>
+                  <ul style={{ listStyleType: 'none', paddingLeft: 1, marginTop: 0 }}>
                     Please bring the following upon enrollment:
                       <li>✅ Complete and Updated Vaccination Records</li>
-                      <li>✅ Sufficient Dog Food for the entire training period</li>
+                      <li>✅ Dog Food for the entire training period</li>
                       <li>✅ Dog Shampoo</li>
                       <li>✅ Towel</li>
                       <li>✅ Vitamins or Supplements (if applicable)</li>
