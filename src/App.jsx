@@ -123,6 +123,7 @@ function App() {
       importCoachHighlight,
       importMethodology,
       importServices,
+      importEnrollment,
       importProcessFlow,
       importShowreel,
       importTestimonials,

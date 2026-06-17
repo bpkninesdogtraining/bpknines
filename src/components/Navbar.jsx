@@ -387,13 +387,20 @@ const Navbar = ({ siteContent, currentPath = '/' }) => {
           <Button
             variant="contained"
             color="primary"
-            href={messageUsHref}
-            target={messageUsIsExternal ? '_blank' : undefined}
-            rel={messageUsIsExternal ? 'noreferrer' : undefined}
-            sx={{ m: 1.5 }}
+             //  href={messageUsHref}
+              href={'#enrollment'}
+              // target={messageUsIsExternal ? '_blank' : undefined}
+              // rel={messageUsIsExternal ? 'noreferrer' : undefined}
+             sx={{ m: 1.5,background: 'linear-gradient(135deg, #f6e06f 0%, #f1d11b 52%, #d8b300 100%)', border: '1px solid rgba(255,255,255,0.26)',
+                  boxShadow: '0px 18px 40px rgba(241, 209, 27, 0.30)',
+                  '&:hover': {
+                    background: 'linear-gradient(135deg, #f8e892 0%, #f2dc49 52%, #ddb90a 100%)',
+                    boxShadow: '0px 22px 46px rgba(241, 209, 27, 0.36)',
+                  }, color: 'secondary.contrastText' }}
+             
             onClick={(event) => handleNavClick(event, messageUsHref, true)}
           >
-            Message Us
+            Enroll My Dog
           </Button>
         </Box>
       </Drawer>

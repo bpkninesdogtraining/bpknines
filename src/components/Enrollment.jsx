@@ -199,9 +199,9 @@ const Enrollment = ({ siteContent }) => {
   }, []);
 
   return (
-    <Box id="enrollment" ref={footerRef} className="premium-section premium-section--tint" sx={{ height: { xs: 'auto', md: 900 }, pt: { xs: 7, md: 5 }, pb: 4, position: 'relative' }}>
+    <Box id="enrollment" ref={footerRef} className="premium-section premium-section--tint" sx={{ height: { xs: 'auto', md: 900 }, pt: { xs: 12, md: 5 }, pb: 4, position: 'relative' }}>
       <Container maxWidth={false} sx={{ px: { xs: 2, md: 4 } }}>
-        <Box className="footer-screen-shell" sx={{ position: 'relative', display: { xs: 'none', md: 'block' }, mb: 3.2, minHeight: 250 }}>
+        <Box className="footer-screen-shell" sx={{ position: 'relative', display: { xs: 'block', md: 'block' }, mb: 3.2, minHeight: 250 }}>
           <Box
             className="footer-screen-glow"
             sx={{
@@ -281,28 +281,7 @@ const Enrollment = ({ siteContent }) => {
                       title="Client Information">
                   </iframe>
                   <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-                  <iframe
-    src="https://api.leadconnectorhq.com/widget/form/mwGxx123GWF7ftl1dwvq"
-    style={{ display: 'none', width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
-    id="popup-mwGxx123GWF7ftl1dwvq" 
-    data-layout="{'id':'POPUP'}"
-    data-trigger-type="alwaysShow"
-    data-trigger-value=""
-    data-activation-type="alwaysActivated"
-    data-activation-value=""
-    data-deactivation-type="neverDeactivate"
-    data-deactivation-value=""
-    data-form-name="Dog Information"
-    data-height="undefined"
-    data-layout-iframe-id="popup-mwGxx123GWF7ftl1dwvq"
-    data-form-id="mwGxx123GWF7ftl1dwvq"
-    title="Dog Information"
-    data-modal-height="500"
-        >
-</iframe>
-<script src="https://link.msgsndr.com/js/form_embed.js"></script>
-                </Box>
-                
+                </Box>                
               </Grid>     
       </Box>
       </Box>
