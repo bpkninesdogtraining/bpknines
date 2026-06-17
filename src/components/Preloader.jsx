@@ -5,9 +5,11 @@ import gsap from 'gsap';
 import { CustomEase } from 'gsap/CustomEase';
 import { MotionPathPlugin } from 'gsap/MotionPathPlugin';
 import { TextPlugin } from 'gsap/TextPlugin';
-import brandLogo from '../assets/BPK9Icons/Assets.xcassets/AppIcon.appiconset/256.png';
-import chipLeftIcon from '../assets/BPK9Icons/android/mipmap-xxhdpi/ic_launcher.png';
-import chipRightIcon from '../assets/BPK9Icons/Assets.xcassets/AppIcon.appiconset/128.png';
+// import brandLogo from '../assets/BPK9Icons/Assets.xcassets/AppIcon.appiconset/256.png';
+import brandLogo from '../assets/bpknineslogonobg.png';
+import chipLeftIcon from '../assets/BPK9Icons/android/mipmap-xxhdpi/bpknineslogonobg.png';
+import chipRightIcon from '../assets/BPK9Icons/android/mipmap-xxhdpi/bpknineslogonobg.png';
+// import chipRightIcon from '../assets/BPK9Icons/Assets.xcassets/AppIcon.appiconset/128.png';
 
 gsap.registerPlugin(CustomEase, MotionPathPlugin, TextPlugin);
 
@@ -190,11 +192,11 @@ const Preloader = ({ onComplete }) => {
               top: { xs: 16, md: 26 },
               width: { xs: 44, md: 56 },
               height: { xs: 44, md: 56 },
-              p: 0.6,
-              borderRadius: 3,
-              bgcolor: 'rgba(255,255,255,0.78)',
-              border: '1px solid rgba(31,74,59,0.10)',
-              boxShadow: '0px 16px 34px rgba(20, 37, 54, 0.08)',
+              // p: 0.6,
+              // borderRadius: 3,
+              // bgcolor: 'rgba(255,255,255,0.78)',
+              // border: '1px solid rgba(31,74,59,0.10)',
+              // boxShadow: '0px 16px 34px rgba(20, 37, 54, 0.08)',
             }}
           >
             <Box component="img" src={chipLeftIcon} alt="" sx={{ width: '100%', height: '100%', objectFit: 'contain' }} />
@@ -204,12 +206,12 @@ const Preloader = ({ onComplete }) => {
             sx={{
               width: { xs: 120, md: 148 },
               height: { xs: 120, md: 148 },
-              p: 1.2,
-              borderRadius: 5,
-              bgcolor: 'rgba(255,255,255,0.78)',
-              border: '1px solid rgba(31,74,59,0.10)',
-              boxShadow: '0px 24px 54px rgba(19, 35, 29, 0.12)',
-              backdropFilter: 'blur(12px)',
+              // p: 1.2,
+              // borderRadius: 0,
+              // bgcolor: 'rgba(255,255,255,0.78)',
+              // border: '1px solid rgba(31,74,59,0.10)',
+              // boxShadow: '0px 24px 54px rgba(19, 35, 29, 0.12)',
+              // backdropFilter: 'blur(12px)',
             }}
           >
             <Box component="img" src={brandLogo} alt="BPKNINES logo" sx={{ width: '100%', height: '100%', objectFit: 'contain' }} />
@@ -222,11 +224,11 @@ const Preloader = ({ onComplete }) => {
               bottom: { xs: 18, md: 24 },
               width: { xs: 48, md: 60 },
               height: { xs: 48, md: 60 },
-              p: 0.65,
-              borderRadius: 3.2,
-              bgcolor: 'rgba(255,255,255,0.78)',
-              border: '1px solid rgba(31,74,59,0.10)',
-              boxShadow: '0px 16px 34px rgba(20, 37, 54, 0.08)',
+              // p: 0.65,
+              // borderRadius: 3.2,
+              // bgcolor: 'rgba(255,255,255,0.78)',
+              // border: '1px solid rgba(31,74,59,0.10)',
+              // boxShadow: '0px 16px 34px rgba(20, 37, 54, 0.08)',
             }}
           >
             <Box component="img" src={chipRightIcon} alt="" sx={{ width: '100%', height: '100%', objectFit: 'contain' }} />
