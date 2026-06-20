@@ -159,7 +159,7 @@ const Services = ({ siteContent }) => {
             {/* <Typography className="services-heading" sx={{ color: 'primary.main', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', mb: 1, fontSize: '0.8rem' }}>
               {services.eyebrow}
             </Typography> */}
-            <Typography className="services-heading " variant="h2" sx={{ mb: 1.4, fontSize: { xs: '2.5rem', md: '3.3rem' }, '& .gsap-title-word': { display: 'inline-block', transformOrigin: '0% 100%' } }}>
+            <Typography className="services-heading " variant="h2" sx={{ mb: 1.4, fontSize: { xs: '2rem', md: '3.3rem' }, '& .gsap-title-word': { display: 'inline-block', transformOrigin: '0% 100%' } }}>
               {services.title}
             </Typography>
             <Typography className="services-heading" variant="body1" sx={{ color: 'text.secondary', maxWidth: '100%' }}>

@@ -233,10 +233,10 @@ const Enrollment = ({ siteContent }) => {
           <Grid container spacing={2.2}>
                 
                 <Grid size={{ xs: 12, sm: 6 }}>
-                  <Typography className="blog-heading section-title" variant="h2" sx={{ mx: 2,mb: 2.5, fontSize: { xs: '2.35rem', md: '3rem' }, '& .gsap-title-word': { display: 'inline-block', transformOrigin: '0% 100%' } }}>
+                  <Typography className="blog-heading section-title" variant="h2" sx={{ mx: 2,mb: 2.5, fontSize: { xs: '2rem', md: '3rem' }, '& .gsap-title-word': { display: 'inline-block', transformOrigin: '0% 100%' } }}>
                   {enrollment.title}
                   </Typography>
-                  <Typography className="blog-heading" variant="body1" sx={{ color: 'text.secondary', textAlign: 'left', maxWidth: 680, marginLeft: 3 }}>
+                  <Typography className="blog-heading" variant="body1" sx={{ color: 'text.secondary',fontSize: { xs: '.9rem' }, textAlign: 'left', maxWidth: 680, marginLeft: 3 }}>
                   Thank you for choosing BPKNines Dog Training Center! <br /> <br />
                   <ul style={{ listStyleType: 'number', paddingLeft: 10, marginTop: 0 }}>
                     <li> Please complete the Client Information Form </li>
@@ -246,10 +246,10 @@ const Enrollment = ({ siteContent }) => {
                     <li> Review the contract carefully and if you agree to the terms, click the e-signature field to sign it and select the date signed.</li>
                   </ul>
                   </Typography>
-                 <Typography className="blog-heading section-title" variant="h3" sx={{ mx: 2,mb: 2.5, fontSize: { xs: '1.7rem', md: '2rem' }, '& .gsap-title-word': { display: 'inline-block', transformOrigin: '0% 100%' } }}>
+                 <Typography className="blog-heading section-title" variant="h3" sx={{ mx: 2,mb: 2.5, fontSize: { xs: '1rem', md: '2rem' }, '& .gsap-title-word': { display: 'inline-block', transformOrigin: '0% 100%' } }}>
                   Boarding & Training Requirements
                   </Typography>
-                 <Typography className="blog-heading" variant="body1" sx={{ color: 'text.secondary', textAlign: 'left', maxWidth: 680, marginLeft: 3 }}>
+                 <Typography className="blog-heading" variant="body1" sx={{ color: 'text.secondary', textAlign: 'left', fontSize: { xs: '.9rem' },maxWidth: 680, marginLeft: 3 }}>
                   <ul style={{ listStyleType: 'none', paddingLeft: 1, marginTop: 0 }}>
                     Please bring the following upon enrollment:
                       <li>✅ Complete and Updated Vaccination Records</li>

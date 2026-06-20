@@ -340,13 +340,6 @@ const Hero = ({ siteContent }) => {
               }}
             >
 
-              <Box className="hero-orbit-paths" sx={{ position: 'absolute', inset: 0, pointerEvents: 'none' }} aria-hidden="true">
-                <svg viewBox="0 0 840 300" width="100%" height="100%">
-                  <path className="hero-orbit-path-a" d="M80 168 C 200 82, 438 78, 684 130 C 760 146, 776 180, 742 206 C 668 262, 340 266, 136 232 C 50 218, 26 194, 80 168" fill="none" stroke="transparent" />
-                  <path className="hero-orbit-path-b" d="M44 198 C 120 118, 368 98, 622 134 C 748 152, 780 194, 670 226 C 474 278, 214 274, 70 232 C 34 222, 26 212, 44 198" fill="none" stroke="transparent" />
-                  <path className="hero-orbit-path-c" d="M124 114 C 262 58, 470 58, 648 94 C 744 112, 772 138, 724 160 C 658 188, 372 204, 198 176 C 112 162, 74 134, 124 114" fill="none" stroke="transparent" />
-                </svg>
-              </Box>
               <Box
                 className="hero-headline-shimmer"
                 sx={{
