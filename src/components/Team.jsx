@@ -186,7 +186,7 @@ const Team = ({ siteContent }) => {
           </Box>
 
           <Collapse in={expanded} timeout={320}>
-            <Box className="team-rail-shell premium-panel" sx={{ p: { xs: 1.4, md: 1.8 }, borderRadius: 2, overflow: 'hidden' }}>
+            <Box  sx={{ p: { xs: 1.4, md: 1.8 }, borderRadius: 2, overflow: 'hidden' }}>
               <Box
                 ref={railRef}
                 sx={{
@@ -200,7 +200,7 @@ const Team = ({ siteContent }) => {
                 }}
               >
                 {team.members.map((member, index) => (
-                  <Card key={member.name} data-team-index={index} className="team-member-card premium-panel" sx={{ flex: { xs: '0 0 88%', sm: '0 0 58%', md: '0 0 34%' }, position: 'relative', overflow: 'hidden', borderRadius: 2, scrollSnapAlign: 'start' }}>
+                  <Card key={member.name} data-team-index={index} sx={{ flex: { xs: '0 0 88%', sm: '0 0 58%', md: '0 0 34%' }, position: 'relative', overflow: 'hidden', borderRadius: 2, scrollSnapAlign: 'start' }}>
                     <CardAccentSvg variant={index % 2 === 0 ? 'arc' : 'grid'} />
                     <Box className="premium-media-frame" sx={{ overflow: 'hidden', minHeight: 280 }}>
                       <Box component="img" src={imageMap[member.imageKey]} alt={member.name} loading="lazy" decoding="async" sx={{ width: '100%', height: '100%', objectFit: 'cover' }} />

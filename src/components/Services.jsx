@@ -23,7 +23,7 @@ import { addTitleScramble, prepareTitleWords, TITLE_REVEAL_EASE } from '../utils
 gsap.registerPlugin(ScrollTrigger);
 
 const iconByTitle = {
-  'Basic Obedience': PetsOutlinedIcon,
+  'Practical Obedience': PetsOutlinedIcon,
   'Behavior Modification': PsychologyAltOutlinedIcon,
   'Behavior Rehabilitation': CabinOutlinedIcon,
   'Paws & Learn Group Class': SpaOutlinedIcon,
@@ -159,7 +159,7 @@ const Services = ({ siteContent }) => {
             {/* <Typography className="services-heading" sx={{ color: 'primary.main', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', mb: 1, fontSize: '0.8rem' }}>
               {services.eyebrow}
             </Typography> */}
-            <Typography className="services-heading " variant="h2" sx={{ mb: 1.4, fontSize: { xs: '2rem', md: '3.3rem' }, '& .gsap-title-word': { display: 'inline-block', transformOrigin: '0% 100%' } }}>
+            <Typography className="services-heading " variant="h2" sx={{ mb: 1.4, fontSize: { xs: '2.5rem', md: '3.3rem' }, '& .gsap-title-word': { display: 'inline-block', transformOrigin: '0% 100%' } }}>
               {services.title}
             </Typography>
             <Typography className="services-heading" variant="body1" sx={{ color: 'text.secondary', maxWidth: '100%' }}>
@@ -212,7 +212,7 @@ const Services = ({ siteContent }) => {
                   <CardContent sx={{ p: 2.6, display: 'flex', flexDirection: 'column', height: '100%' }}>
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 1.5, mb: 1.6 }}>
                       <Box sx={{ width: 500, height: 48,p: 1.5, borderRadius: 1.5, display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'minmax(0.5em, 1fr) auto' }, placeItems: 'left', bgcolor: 'rgba(3, 18, 13, 0.08)', color: 'primary.main' }}>
-                        <Typography variant="h4" sx={{ mb: 1, fontSize: { xs: '1.22rem', md: '1.05rem' }}}>
+                        <Typography variant="h4" sx={{ mb: 1, fontSize: { xs: '1.10rem', md: '1.05rem' }}}>
                            <Icon /> {service.title}
                         </Typography>
                     
