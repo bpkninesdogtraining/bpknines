@@ -212,8 +212,8 @@ const Services = ({ siteContent }) => {
                   <CardContent sx={{ p: 2.6, display: 'flex', flexDirection: 'column', height: '100%' }}>
                     <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 1.5, mb: 1.6 }}>
                       <Box sx={{ width: 500, height: 48,p: 1.5, borderRadius: 1.5, display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'minmax(0.5em, 1fr) auto' }, placeItems: 'left', bgcolor: 'rgba(3, 18, 13, 0.08)', color: 'primary.main' }}>
-                        <Typography variant="h4" sx={{ mb: 1, fontSize: { xs: '1.10rem', md: '1.05rem' }}}>
-                           <Icon /> {service.title}
+                        <Typography variant="h4" sx={{ mb: 1, fontSize: { xs: '1rem', md: '1.05rem' }}}>
+                           {service.title}
                         </Typography>
                     
                       </Box>
