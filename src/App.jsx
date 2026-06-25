@@ -13,6 +13,7 @@ import { siteContent as fallbackSiteContent } from './content/siteContent';
 const importCoachHighlight = () => import('./components/CoachHighlight');
 const importMethodology = () => import('./components/Methodology');
 const importServices = () => import('./components/Services');
+const importDogBoarding = () => import('./components/DogBoarding');
 const importProcessFlow = () => import('./components/ProcessFlow');
 const importShowreel = () => import('./components/Showreel');
 const importTestimonials = () => import('./components/Testimonials');
@@ -33,6 +34,7 @@ const Blog = lazy(importBlog);
 const FAQ = lazy(importFAQ);
 const Footer = lazy(importFooter);
 const Enrollment = lazy(importEnrollment);
+const DogBoarding = lazy(importDogBoarding);
 
 function SectionFallback() {
   return (
@@ -124,6 +126,7 @@ function App() {
       importMethodology,
       importServices,
       importEnrollment,
+      importDogBoarding,
       importProcessFlow,
       importShowreel,
       importTestimonials,
@@ -254,8 +257,11 @@ function App() {
               <Suspense fallback={<SectionFallback />}>
                 <Services siteContent={siteContent} />
               </Suspense>
-              <Suspense fallback={<SectionFallback />}>
+               <Suspense fallback={<SectionFallback />}>
                 <Enrollment siteContent={siteContent} />
+              </Suspense>
+              <Suspense fallback={<SectionFallback />}>
+                <DogBoarding siteContent={siteContent} />
               </Suspense>
               
               <Suspense fallback={<SectionFallback />}>

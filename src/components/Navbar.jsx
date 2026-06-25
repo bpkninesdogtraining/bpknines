@@ -50,6 +50,7 @@ const Navbar = ({ siteContent, currentPath = '/' }) => {
         ? [
           { label: 'Home', href: '/' },
           { label: 'Training Programs', href: '#services' },
+          { label: 'Dog Boarding', href: '#dogboarding' },
           { label: 'Coach', href: '#coach-vinz' },
           { label: 'Results', href: '#showreel' },
           { label: 'Guides', href: '/knowledge-base' },
@@ -65,8 +66,8 @@ const Navbar = ({ siteContent, currentPath = '/' }) => {
         ],
     [isHomeRoute]
   );
-  const messageUsHref = siteContent.contact?.primaryCta?.href || '#contact';
-  const messageUsIsExternal = /^https?:\/\//.test(messageUsHref);
+  // const messageUsHref = siteContent.contact?.primaryCta?.href || '#contact';
+  // const messageUsIsExternal = /^https?:\/\//.test(messageUsHref);
   const handleNavClick = (event, href, shouldCloseMobile = false) => {
     if (shouldCloseMobile) {
       setMobileOpen(false);
