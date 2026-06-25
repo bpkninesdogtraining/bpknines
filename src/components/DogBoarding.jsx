@@ -199,7 +199,7 @@ const DogBoarding = ({ siteContent }) => {
   }, []);
 
   return (
-    <Box id="dogboarding" ref={footerRef} className="premium-section premium-section--tint" sx={{ height: { xs: 'auto', md: 900 }, pt: { xs: 12, md: 5 }, pb: 4, position: 'relative' }}>
+    <Box id="dogboarding" ref={footerRef} className="premium-section premium-section--tint" sx={{ height: { xs: 'auto', md: 900 }, pt: { xs: 1, md: 5 }, pb: 4, position: 'relative' }}>
       <Container maxWidth={false} sx={{ px: { xs: 2, md: 4 } }}>
         <Box className="footer-screen-shell" sx={{ position: 'relative', display: { xs: 'block', md: 'block' }, mb: 3.2, minHeight: 250 }}>
           <Box
