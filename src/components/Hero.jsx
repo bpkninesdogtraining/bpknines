@@ -264,7 +264,7 @@ const Hero = ({ siteContent }) => {
       <Container maxWidth={false} sx={{ px: { xs: 2, md: 4 } }}>
         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'minmax(0, 1.2fr) minmax(390px, 0.8fr)' }, gap: { xs: 2.5, md: 4 }, alignItems: 'center' }}>
           <Box sx={{ position: 'relative', maxWidth: { md: 840 } }}>
-            <Box
+            {/* <Box
               className="hero-heading-orb-a"
               sx={{
                 position: 'absolute',
@@ -305,7 +305,7 @@ const Hero = ({ siteContent }) => {
                 border: '1px solid rgba(31, 74, 59, 0.22)',
                 pointerEvents: 'none',
               }}
-            />
+            /> */}
             <Typography className="hero-kicker" sx={{ display:'inline-flex', mt:1,px: { xs: 1.35, md: 2 }, py: { xs: 0.7, md: 0.7 }, borderRadius: 2.5, bgcolor: 'rgba(241, 209, 27, 0.14)', color: 'primary.main', border: '1px solid rgba(241, 209, 27, 0.22)', fontWeight: 800, letterSpacing: '0.08em', textTransform: 'uppercase', fontSize: { xs: '0.4rem', md: '0.76rem' }, mb: { xs: 1.6, md: 1 } }}>
               {hero.eyebrow}
             </Typography>
