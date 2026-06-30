@@ -92,7 +92,7 @@ function ResourceLinks() {
              <iframe src="https://api.leadconnectorhq.com/widget/booking/609qxXf5ntwBICuUzu6p" style={{ width: '100%', height: 900, border: 'none', overflow: 'hidden' }} scrolling={"yes"} id={"Elmm4Ehs2CY4J8SwUQOi_1780906906673"}></iframe>
              <script src="https://link.msgsndr.com/js/form_embed.js" type="text/javascript"></script>
   
-          <Typography variant="h4" sx={{ fontSize: { xs: '1.35rem', md: '1.7rem' }, lineHeight: 1.12, mb: 0.9 }}>
+          {/* <Typography variant="h4" sx={{ fontSize: { xs: '1.35rem', md: '1.7rem' }, lineHeight: 1.12, mb: 0.9 }}>
             Need more detail before booking?
           </Typography>
           <Typography variant="body2" sx={{ color: 'text.secondary', maxWidth: 680, mb: 1.8 }}>
@@ -109,7 +109,7 @@ function ResourceLinks() {
               Open Knowledge Base
             </Button>
            
-          </Box>
+          </Box> */}
         </Box>
       </Container>
     </Box>

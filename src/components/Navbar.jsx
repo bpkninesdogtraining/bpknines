@@ -52,7 +52,7 @@ const Navbar = ({ siteContent, currentPath = '/' }) => {
           { label: 'Training Programs', href: '#services' },
           { label: 'Dog Boarding', href: '#dogboarding' },
           { label: 'Coach', href: '#coach-vinz' },
-          { label: 'Results', href: '#showreel' },
+          { label: 'Furparent\'s Feedback', href: '#showreel' },
           { label: 'Guides', href: '/knowledge-base' },
           { label: 'FAQ', href: '/faq' },
           { label: 'Contact', href: '#contact' },

@@ -37,6 +37,8 @@ const Services = ({ siteContent }) => {
   const [activeIndex, setActiveIndex] = useState(0);
   const { services } = siteContent;
   const featuredServices = services.items.filter((service) => service.title !== 'Trainer Program');
+  
+    const { hero, contact } = siteContent;
 
   const scrollToIndex = useCallback((index) => {
     const rail = railRef.current;
@@ -161,6 +163,7 @@ const Services = ({ siteContent }) => {
             </Typography> */}
             <Typography className="services-heading " variant="h2" sx={{ mb: 1.4, fontSize: { xs: '2rem', md: '3.3rem' }, '& .gsap-title-word': { display: 'inline-block', transformOrigin: '0% 100%' } }}>
               {services.title}
+              
             </Typography>
             <Typography className="services-heading" variant="body1" sx={{ color: 'text.secondary', maxWidth: '100%' }}>
               {services.description}
@@ -240,6 +243,15 @@ const Services = ({ siteContent }) => {
                       </Typography>
                       <Button variant="outlined" href="#contact">
                         Ask About This Program
+                      </Button>
+                      <Button variant="contained" href={hero.primaryCta.href} size="small" sx={{ flex: { xs: 1, md: '0 0 auto' }, minHeight: { xs: 42, md: 48 }, mx:1,mt:1,px: { xs: 1.4, md: 2.2 }, fontSize: { xs: '1rem', md: '0.95rem' }, whiteSpace: 'nowrap', color: 'secondary.contrastText', background: 'linear-gradient(135deg, #f6e06f 0%, #f1d11b 52%, #d8b300 100%)',
+                          border: '1px solid rgba(255,255,255,0.26)',
+                          boxShadow: '0px 18px 40px rgba(241, 209, 27, 0.30)',
+                          '&:hover': {
+                            background: 'linear-gradient(135deg, #f8e892 0%, #f2dc49 52%, #ddb90a 100%)',
+                            boxShadow: '0px 22px 46px rgba(241, 209, 27, 0.36)',
+                          }, }}>
+                        {hero.primaryCta.label}
                       </Button>
                     </Box>
                   </CardContent>

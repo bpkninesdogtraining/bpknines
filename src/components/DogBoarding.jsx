@@ -264,7 +264,7 @@ const DogBoarding = ({ siteContent }) => {
                   </Typography>
                 </Grid>
                 
-                  <Box sx={{ justifySelf: 'start', width: '100%', maxWidth: 660, height: 610, borderRadius: 3, border: '1px solid rgba(31, 74, 59, 0.10)'}}>
+                  <Box sx={{ justifySelf: 'start', width: '100%', maxWidth: 660, height:{xs: 740, md: 610}, borderRadius: 3, border: '1px solid rgba(31, 74, 59, 0.10)'}}>
                    <iframe
                     src="https://api.leadconnectorhq.com/widget/form/9GVtN9HyuZ0uu5M0TMlA"
                     style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}

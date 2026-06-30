@@ -485,7 +485,7 @@ const Showreel = () => {
         className="showreel-aura"
         sx={{
           position: 'absolute',
-          top: { xs: 90, md: 64 },
+          top: { xs: 90, md: 50 },
           left: { xs: '12%', md: '16%' },
           width: { xs: 240, md: 380 },
           height: 220,
@@ -495,7 +495,12 @@ const Showreel = () => {
           pointerEvents: 'none',
         }}
       />
+        
       <Container maxWidth={false} sx={{ px: { xs: 2, md: 4 }, mb: 3 }}>
+      <Box  className="premium-panel" sx={{ display:{xs: 'flex', md: 'flex'}, p: 2, height: { xs: 750, md: 400 }, borderRadius: 2, border: '1px solid rgba(255,255,255,0.16)' }}>
+        <script type='text/javascript' src='https://reputationhub.site/reputation/assets/review-widget.js'></script><iframe class='lc_reviews_widget' src='https://reputationhub.site/reputation/widgets/review_widget/5QGx9HZ46r4zMETj9f3K?widgetId=6a43aa7a5ab92d63d509be6e' frameborder='0' scrolling='no' style={{  minWidth: '100%', width: '100%', height: { xs: 900, md: 700 } , }}></iframe>
+      </Box>
+     
         <Box
           className="showreel-screen-shell premium-panel"
           sx={{
@@ -505,12 +510,16 @@ const Showreel = () => {
             borderRadius: 4,
             p: { xs: 2.2, md: 2.6 },
             bgcolor: 'rgba(255,255,255,0.74)',
+            height: { xs: 220, md: 260 },
           }}
         >
+          
           <Box className="showreel-screen-grid" sx={{ position: 'absolute', inset: 0, opacity: 0.15, backgroundImage: 'linear-gradient(180deg, rgba(31,74,59,0.08) 0, rgba(31,74,59,0.08) 1px, transparent 1px, transparent 28px), linear-gradient(90deg, rgba(31,74,59,0.05) 0, rgba(31,74,59,0.05) 1px, transparent 1px, transparent 28px)', backgroundSize: '28px 28px' }} />
           <Box sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,255,255,0.40) 0%, rgba(255,255,255,0.04) 58%, rgba(31,74,59,0.08) 100%)' }} />
+         
           <Box sx={{ position: 'relative', display: 'grid', gridTemplateColumns: { xs: '1fr', md: '1.5fr 0.95fr' }, gap: 2.5, alignItems: 'center' }}>
-            <Box>
+         
+            <Box sx={{ display: 'grid', gap: 1.5, maxWidth: { xs: '100%', md: 600, height: { xs: '100%', md: '100%' } } }}>
               <Typography sx={{ color: 'primary.main', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', fontSize: '0.76rem', mb: 1 }}>
                 Results overview
               </Typography>
@@ -537,6 +546,7 @@ const Showreel = () => {
             </Box>
           </Box>
         </Box>
+                      
         <Typography className="showreel-heading" sx={{ color: 'primary.main', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', mb: 1.25, fontSize: '0.8rem' }}>
           Results in Motion
         </Typography>

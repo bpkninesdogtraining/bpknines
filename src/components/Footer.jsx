@@ -215,7 +215,7 @@ const Footer = ({ siteContent }) => {
         }}
       />
       <Container  maxWidth={false} sx={{ px: { xs: 2, md: 4 } }}>
-        <Box className="footer-screen-shell" sx={{ position: 'relative', display: { xs: 'none', md: 'block' }, mb: 3.2, minHeight: 250 }}>
+        <Box className="footer-screen-shell" sx={{ position: 'relative', display: { xs: 'block', md: 'block' }, mb: 3.2, minHeight: 250 }}>
           <Box
             className="footer-screen-glow"
             sx={{
@@ -238,8 +238,9 @@ const Footer = ({ siteContent }) => {
               bgcolor: 'rgba(255,255,255,0.72)',
               backdropFilter: 'blur(12px)',
               boxShadow: '0px 28px 70px rgba(15, 29, 24, 0.10)',
-              px: { md: 4.2 },
-              py: { md: 3.6 },
+              px: { xs: 2, md: 4.2 },
+              py: { xs: 3.6, md: 3.6 },
+              
             }}
           >
             <Box 
@@ -257,23 +258,22 @@ const Footer = ({ siteContent }) => {
             <Box sx={{ position: 'absolute', inset: 0, background: 'linear-gradient(135deg, rgba(255,255,255,0.50) 0%, rgba(255,255,255,0.05) 58%, rgba(31,74,59,0.08) 100%)', pointerEvents: 'none' }} />
             <Box sx={{ position: 'relative', display: 'grid', gridTemplateColumns: '1.05fr 0.55fr', gap: 3.2, alignItems: 'center' }}>
               <Box id="contact">
-                <Typography variant="h3" sx={{ fontSize: '2.45rem', lineHeight: 1.02, mb: 1.5 }}>
+                <Typography variant="h3" sx={{ fontSize: { xs: '1.9rem', md: '2.45rem' }, lineHeight: 1.02, mb: 1.5, maxWidth: {  md: 700 } }}>
                   Message the team or visit our training center.                  
                 </Typography>
-                <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: 700,mb: 2.5  }}>
+                <Typography variant="body1" sx={{ color: 'text.secondary', maxWidth: {  md: 700 }, mb: 2.5 }}>
                   Share what is happening with your dog and we will guide you to the simplest next step, whether that means obedience, behavior reset, or a more focused coaching setup.
                 </Typography>
               <Grid container spacing={2.2}>
-                
                 <Grid size={{ xs: 12, sm: 6 }}>
                   
                   <Typography sx={{ fontWeight: 800, mb: 0.75 }}>Location</Typography>
-                  <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2.2 }}>
+                  <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2.2, maxWidth: { md: 700 } }}>
                     {contact.location}
                   </Typography>
 
                   <Typography sx={{ fontWeight: 800, mb: 0.75 }}>Hours</Typography>
-                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                  <Typography variant="body2" sx={{ color: 'text.secondary', maxWidth: {  md: 700 } }}>
                     {contact.hours.join(' | ')}
                   </Typography>
                 </Grid>
@@ -286,7 +286,7 @@ const Footer = ({ siteContent }) => {
                     {contact.email}
                   </Typography>
 
-                  <Box sx={{ display: 'flex', gap: 1.5, flexWrap: 'wrap' }}>
+                  <Box sx={{ display: 'flex', gap: 1, flexWrap: 'nowrap' }}>
                     {contact.socials.map((social) => {
                       const Icon = socialIcons[social.label];
                       return (
@@ -324,12 +324,8 @@ const Footer = ({ siteContent }) => {
                   </Box>
                 </Grid>
               </Grid>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.9668646585214!2d121.00943197514455!3d14.196718586243158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd7d272e6278af%3A0xdc79ea2379faf068!2sBPKNines%20Dog%20Training%20Camp!5e0!3m2!1sen!2sph!4v1781510851040!5m2!1sen!2sph" width="780" height="400" style={{marginTop: 3, border: '3px solid #000'}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-              </Box>
-              
-              
-              <Box sx={{ justifySelf: 'end', width: '100%', maxWidth: 560 }}>
-                <Box className="premium-panel premium-panel--dark" sx={{ p: 2, height: 700, borderRadius: 2, border: '1px solid rgba(255,255,255,0.16)' }}>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.9668646585214!2d121.00943197514455!3d14.196718586243158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd7d272e6278af%3A0xdc79ea2379faf068!2sBPKNines%20Dog%20Training%20Camp!5e0!3m2!1sen!2sph!4v1781510851040!5m2!1sen!2sph" height="400" style={{ width: '100%', maxWidth: {xs: '700', md: '780' }, marginTop: 3, border: '3px solid #000'}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <Box className="premium-panel premium-panel--dark" sx={{ display:{xs: 'block', md: 'none'}, p: 2, height: 700, borderRadius: 2, border: '1px solid rgba(255,255,255,0.16)' }}>
                   {/* <Typography sx={{ color: 'rgba(247,244,238,0.74)', fontSize: '0.74rem', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, mb: 1.1 }}>
                     Fast response
                   </Typography>
@@ -342,7 +338,43 @@ const Footer = ({ siteContent }) => {
 
                   <iframe
                       src="https://api.leadconnectorhq.com/widget/form/aaregL1QwyiLSkko9IwF"
-                      style={{ width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
+                      style={{  width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
+                      id={"inline-aaregL1QwyiLSkko9IwF" }
+                      data-layout={{'id':'INLINE'}}
+                      data-trigger-type="alwaysShow"
+                      data-trigger-value=""
+                      data-activation-type="alwaysActivated"
+                      data-activation-value=""
+                      data-deactivation-type="neverDeactivate"
+                      data-deactivation-value=""
+                      data-form-name="Contact Us"
+                      data-height="938"
+                      data-layout-iframe-id="inline-aaregL1QwyiLSkko9IwF"
+                      data-form-id="aaregL1QwyiLSkko9IwF"
+                      title="Contact Us"
+                      
+                          >
+                  </iframe>
+                  <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+                </Box>
+
+              </Box>
+              
+              <Box sx={{ justifySelf: 'end', width: '100%', maxWidth: 560 }}>
+                <Box className="premium-panel premium-panel--dark" sx={{ display:{xs: 'block', md: 'flex'}, p: 2, height: 700, borderRadius: 2, border: '1px solid rgba(255,255,255,0.16)' }}>
+                  {/* <Typography sx={{ color: 'rgba(247,244,238,0.74)', fontSize: '0.74rem', textTransform: 'uppercase', letterSpacing: '0.08em', fontWeight: 700, mb: 1.1 }}>
+                    Fast response
+                  </Typography>
+                  <Typography sx={{ color: '#f8f6f1', fontSize: '1.55rem', fontWeight: 700, lineHeight: 1.15, mb: 1.1 }}>
+                    Clear recommendation for your dog and your routine.
+                  </Typography>
+                  <Typography variant="body2" sx={{ color: 'rgba(247,244,238,0.84)' }}>
+                    Built for owners who want simple answers, realistic progress, and direct support.
+                  </Typography> */}
+
+                  <iframe
+                      src="https://api.leadconnectorhq.com/widget/form/aaregL1QwyiLSkko9IwF"
+                      style={{  width: '100%', height: '100%', border: 'none', borderRadius: '3px' }}
                       id={"inline-aaregL1QwyiLSkko9IwF" }
                       data-layout={{'id':'INLINE'}}
                       data-trigger-type="alwaysShow"
@@ -365,7 +397,7 @@ const Footer = ({ siteContent }) => {
             </Box>
           </Box>
         </Box>
-        <Grid container spacing={3}>
+        {/* <Grid container spacing={3}>
           <Grid size={{ xs: 12, md: 7 }} className="footer-card">
             <Box className="premium-panel" sx={{ p: { xs: 3, md: 3.8 }, borderRadius: 2, bgcolor: 'rgba(255, 255, 255, 0.82)', border: '1px solid rgba(31, 74, 59, 0.10)', height: '100%', position: 'relative', overflow: 'hidden' }}>
               <CardAccentSvg variant="grid" sx={{ width: 140, height: 80, top: 10, right: 12, opacity: 0.5 }} />
@@ -532,7 +564,7 @@ const Footer = ({ siteContent }) => {
               </Typography>
             </Box>
           </Grid>
-        </Grid>
+        </Grid> */}
 
         <Box sx={{ textAlign: 'center', mt: 6, pt: 3, borderTop: '1px solid rgba(38, 66, 54, 0.08)' }}>
           <Typography variant="caption" sx={{ color: 'text.secondary' }}>

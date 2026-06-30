@@ -405,7 +405,6 @@ const Hero = ({ siteContent }) => {
               <Button variant="outlined" href={hero.secondaryCta.href} size="small" sx={{ flex: { xs: 1, md: '0 0 auto' }, minHeight: { xs: 42, md: 48 }, px: { xs: 1.2, md: 2.2 }, fontSize: { xs: '0.86rem', md: '0.95rem' }, whiteSpace: 'nowrap' }}>
                 {hero.secondaryCta.label}
               </Button>
-              
             </Box>
             <Box className="hero-badge-card premium-panel" sx={{ mb: { xs: 2.5, md: 0 },p: 1, borderRadius: 2, bgcolor: 'rgba(253, 249, 240, 0.96)', border: '1px solid rgba(212, 178, 79, 0.18)', height:{ xs: '100%', md: 220 } }}>
                 <Typography sx={{ fontWeight: 800, fontSize: '0.84rem', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'primary.main', mb: 1 }}>
