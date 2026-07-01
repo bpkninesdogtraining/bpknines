@@ -131,7 +131,7 @@ const ProcessFlow = ({ siteContent }) => {
             <Typography className="process-heading" sx={{ color: 'primary.main', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', mb: 1, fontSize: '0.8rem' }}>
               {process.eyebrow}
             </Typography>
-            <Typography className="process-heading section-title" variant="h2" sx={{ mb: 1.2, fontSize: { xs: '1.95rem', md: '3rem' }, '& .gsap-title-word': { display: 'inline-block', transformOrigin: '0% 100%' } }}>
+            <Typography  variant="h2" sx={{ mb: 1.2, fontSize: { xs: '1.95rem', md: '3rem' }, '& .gsap-title-word': { display: 'inline-block', transformOrigin: '0% 100%' } }}>
               {process.title}
             </Typography>
             <Typography className="process-heading" variant="body1" sx={{ color: 'text.secondary', maxWidth: 620 }}>

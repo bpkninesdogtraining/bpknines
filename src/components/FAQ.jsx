@@ -99,7 +99,7 @@ const FAQ = ({ siteContent }) => {
           <Typography className="faq-heading" sx={{ color: 'primary.main', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', mb: 1.5, fontSize: '0.8rem' }}>
             {faq.eyebrow}
           </Typography>
-          <Typography className="faq-heading section-title" variant="h2" sx={{ mb: 2.5, fontSize: { xs: '1.95rem', md: '3rem' }, '& .gsap-title-word': { display: 'flex', flexWrap: 'nowrap',transformOrigin: '0% 100%' } }}>
+          <Typography  variant="h2" sx={{ mb: 2.5, fontSize: { xs: '1.95rem', md: '3rem' }, '& .gsap-title-word': { display: 'flex', flexWrap: 'nowrap',transformOrigin: '0% 100%' } }}>
             {faq.title}
           </Typography>
         </Box>

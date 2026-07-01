@@ -404,7 +404,7 @@ const CoachHighlight = ({ siteContent }) => {
               <Typography className="coach-heading" sx={{ color: 'primary.main', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', mb: 1, fontSize: '0.78rem' }}>
                 {coachHighlight.eyebrow}
               </Typography>
-              <Typography className="coach-heading section-title" variant="h2" sx={{ mb: 1, fontSize: { xs: '1.6rem', md: '3.2rem' }, lineHeight: { xs: 1.04, md: 1.02 }, '& .gsap-title-word': { display: 'inline-block', transformOrigin: '0% 100%' } }}>
+              <Typography className="coach-heading" variant="h2" sx={{ mb: 1, fontSize: { xs: '1.6rem', md: '3.2rem' }, lineHeight: { xs: 1.04, md: 1.02 }, '& .gsap-title-word': { display: 'inline-block', transformOrigin: '0% 100%' } }}>
                 {coachHighlight.title}
               </Typography>
               <Typography className="coach-heading" variant="body1" sx={{ color: 'text.secondary', maxWidth: 760, fontSize: { xs: '0.96rem', md: '1rem' } }}>
