@@ -263,7 +263,12 @@ function App() {
               <Suspense fallback={<SectionFallback />}>
                 <DogBoarding siteContent={siteContent} />
               </Suspense>
-              
+              <Suspense fallback={<SectionFallback />}>
+                <FAQ siteContent={siteContent} />
+              </Suspense>
+             {/* <Suspense fallback={<SectionFallback />}>
+              <Methodology siteContent={siteContent} />
+            </Suspense>  */}
               <Suspense fallback={<SectionFallback />}>
                 <ProcessFlow siteContent={siteContent} />
               </Suspense>
@@ -272,14 +277,15 @@ function App() {
                 <CoachHighlight siteContent={siteContent} />
               </Suspense>
               <Suspense fallback={<SectionFallback />}>
-                <Showreel />
-              </Suspense>
-              <Suspense fallback={<SectionFallback />}>
-                <Testimonials siteContent={siteContent} />
-              </Suspense>
-              <Suspense fallback={<SectionFallback />}>
                 <Team siteContent={siteContent} />
               </Suspense>
+              <Suspense fallback={<SectionFallback />}>
+                <Showreel />
+              </Suspense>
+              {/* <Suspense fallback={<SectionFallback />}>
+                <Testimonials siteContent={siteContent} />
+              </Suspense> */}
+              
               <ResourceLinks />
             </>
           )}

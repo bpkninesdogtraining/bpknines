@@ -101,7 +101,7 @@ const Methodology = ({ siteContent }) => {
   }, []);
 
   return (
-    <Box id="methodology" ref={methodRef} className="premium-section" sx={{ py: { xs: 6.5, md: 8.5 }, position: 'relative' }}>
+    <Box id="methodology" ref={methodRef} className="premium-section" sx={{ py: { xs: 6.5, md: 1.5 }, position: 'relative' }}>
       <Box
         className="method-aura"
         sx={{
@@ -117,8 +117,8 @@ const Methodology = ({ siteContent }) => {
         }}
       />
       <Container maxWidth={false} sx={{ px: { xs: 2, md: 4 } }}>
-        <Box sx={{ maxWidth: 760, mb: 3 }}>
-          <Typography className="method-heading section-title" variant="h2" sx={{ mb: 2.5, fontSize: { xs: '2.35rem', md: '4rem' }, '& .gsap-title-word': { display: 'inline-block', transformOrigin: '0% 100%' } }}>
+        <Box sx={{ maxWidth: '100%', mb: 3 }}>
+          <Typography className="method-heading section-title" variant="h2" sx={{ mb: 2.5, fontSize: { xs: '2.35rem', md: '3rem' }, '& .gsap-title-word': { display: 'inline-block', transformOrigin: '0% 100%' } }}>
             {methodology.title}
           </Typography>
           <Typography className="method-heading" variant="body1" sx={{ color: 'text.secondary' }}>

@@ -79,7 +79,7 @@ const FAQ = ({ siteContent }) => {
   }, []);
 
   return (
-    <Box ref={sectionRef} className="premium-section" sx={{ py: { xs: 9, md: 13 }, position: 'relative' }}>
+    <Box id="faq" ref={sectionRef} className="premium-section" sx={{ py: { xs: 2, md: 2 }, position: 'relative' }}>
       <Box
         className="faq-aura"
         sx={{
@@ -95,11 +95,11 @@ const FAQ = ({ siteContent }) => {
         }}
       />
       <Container maxWidth={false} sx={{ px: { xs: 2, md: 4 } }}>
-        <Box sx={{ maxWidth: 760, mb: 4 }}>
+        <Box sx={{ maxWidth: '100%', mb: 4 }}>
           <Typography className="faq-heading" sx={{ color: 'primary.main', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', mb: 1.5, fontSize: '0.8rem' }}>
             {faq.eyebrow}
           </Typography>
-          <Typography className="faq-heading section-title" variant="h2" sx={{ mb: 2.5, fontSize: { xs: '2.35rem', md: '4rem' }, '& .gsap-title-word': { display: 'inline-block', transformOrigin: '0% 100%' } }}>
+          <Typography className="faq-heading section-title" variant="h2" sx={{ mb: 2.5, fontSize: { xs: '1.95rem', md: '3rem' }, '& .gsap-title-word': { display: 'flex', flexWrap: 'nowrap',transformOrigin: '0% 100%' } }}>
             {faq.title}
           </Typography>
         </Box>

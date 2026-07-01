@@ -124,10 +124,10 @@ const ProcessFlow = ({ siteContent }) => {
   }, []);
 
   return (
-    <Box id="process" ref={sectionRef} className="premium-section premium-section--tint" sx={{ py: { xs: 6.5, md: 8 }, position: 'relative' }}>
+    <Box id="process" ref={sectionRef} className="premium-section premium-section--tint" sx={{ py: { xs: 1, md: 2 }, position: 'relative' }}>
       <Container maxWidth={false} sx={{ px: { xs: 2, md: 4 } }}>
         <Box sx={{ display: 'grid', gridTemplateColumns: { xs: '1fr', md: 'minmax(0, 1fr) auto' }, gap: 2, alignItems: 'end', mb: 3 }}>
-          <Box sx={{ maxWidth: 720 }}>
+          <Box sx={{ maxWidth: 800 }}>
             <Typography className="process-heading" sx={{ color: 'primary.main', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '0.08em', mb: 1, fontSize: '0.8rem' }}>
               {process.eyebrow}
             </Typography>
