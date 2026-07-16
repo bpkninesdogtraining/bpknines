@@ -19,10 +19,13 @@ import PhoneAndroidIcon from '@mui/icons-material/PhoneAndroid';
 import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
 import IconButton from "@mui/material/IconButton";
 import PetsIcon from '@mui/icons-material/Pets';
+
 import trainmemory1 from '../assets/trainmemory1.jpg';
-import trainmemory2 from '../assets/trainmemory2.jpg';
-import trainmemory3 from '../assets/trainmemory3.jpg';
-import trainmemory4 from '../assets/trainmemory4.jpg';
+import bpkninestrainingmoment1 from '../assets/bpkninestrainingmoment1.jpg';
+import bpkninestrainingmoment2 from '../assets/bpkninestrainingmoment2.jpg';
+import bpkninestrainingmoment3 from '../assets/bpkninestrainingmoment3.jpg';
+import bpkninestrainingmoment4 from '../assets/bpkninestrainingmoment4.jpg';
+import bpkninestrainingmoment5 from '../assets/bpkninestrainingmoment5.jpg';
 import Dialog from '@mui/material/Dialog';
 import DialogActions from '@mui/material/DialogActions';
 import DialogContent from '@mui/material/DialogContent';
@@ -411,12 +414,12 @@ const Hero = ({ siteContent }) => {
                   Training Moments
                 </Typography>
                 <Box sx={{ display: 'grid', gridTemplateColumns: {xs:'repeat(3, 1fr)', md:'repeat(6, 1fr)'},  gap: 1, gridAutoRows: 'auto 1fr',  borderColor:'rgba(212, 178, 79, 0.18)', borderRadius: 1 }}>
-                  <Box className="hero-moment-photo" component="img" src={trainmemory4} alt="Owner and German Shepherd in training field" loading="lazy" decoding="async" sx={{  width: '100%', height:{ xs: '100%', md: '70%' }, objectFit: 'cover', borderRadius: 1, border: '5px solid rgba(0, 0, 0, 0.18)' }} />
-                  <Box className="hero-moment-photo" component="img" src={highlightPhDogPathImg} alt="Dog moving confidently with handler in the background" loading="lazy" decoding="async" sx={{ width: '100%',height:{ xs: '100%', md: '70%' }, objectFit: 'cover', borderRadius: 1, border: '5px solid rgba(0, 0, 0, 0.18)' }} />
-                  <Box className="hero-moment-photo" component="img" src={trainmemory1} alt="Young dog portrait during urban socialization" loading="lazy" decoding="async" sx={{display: 'block', width: '100%', height:{ xs: '100%', md: '70%' }, objectFit: 'cover', borderRadius: 1, border: '5px solid rgba(0, 0, 0, 0.18)' }} />
-                  <Box className="hero-moment-photo" component="img" src={highlightPhPupImg} alt="Young dog portrait during urban socialization" loading="lazy" decoding="async" sx={{ display: 'block',width: '100%', height:{ xs: '100%', md: '70%' }, objectFit: 'cover', borderRadius: 1,border: '5px solid rgba(0, 0, 0, 0.18)' }} />
-                  <Box className="hero-moment-photo" component="img" src={highlightOwnerGsdImg} alt="Owner and German Shepherd in training field" loading="lazy" decoding="async" sx={{ display: 'block',width: '100%', height:{ xs: '100%', md: '70%' }, objectFit: 'cover', borderRadius: 1,border: '5px solid rgba(0, 0, 0, 0.18)' }} />
-                  <Box className="hero-moment-photo" component="img" src={trainmemory3} alt="Dog moving confidently with handler in the background" loading="lazy" decoding="async" sx={{ display: 'block',width: '100%', height:{ xs: '100%', md: '70%' } , objectFit: 'cover', borderRadius: 1,border: '5px solid rgba(0, 0, 0, 0.18)' }} />
+                  <Box className="hero-moment-photo" component="img" src={bpkninestrainingmoment1} alt="BPKNines Training Moment" loading="lazy" decoding="async" sx={{  width: '100%', height:{ xs: '100%', md: '100%' }, objectFit: 'cover', borderRadius: 1, border: '5px solid rgba(0, 0, 0, 0.18)' }} />
+                  <Box className="hero-moment-photo" component="img" src={bpkninestrainingmoment2} alt="BPKNines Training Moment" loading="lazy" decoding="async" sx={{ width: '100%',height:{ xs: '100%', md: '100%' }, objectFit: 'cover', borderRadius: 1, border: '5px solid rgba(0, 0, 0, 0.18)' }} />
+                  <Box className="hero-moment-photo" component="img" src={trainmemory1} alt="BPKNines Training Moment" loading="lazy" decoding="async" sx={{display: 'block', width: '100%', height:{ xs: '100%', md: '100%' }, objectFit: 'cover', borderRadius: 1, border: '5px solid rgba(0, 0, 0, 0.18)' }} />
+                  <Box className="hero-moment-photo" component="img" src={bpkninestrainingmoment3} alt="BPKNines Training Moment" loading="lazy" decoding="async" sx={{ display: 'block',width: '100%', height:{ xs: '100%', md: '100%' }, objectFit: 'cover', borderRadius: 1,border: '5px solid rgba(0, 0, 0, 0.18)' }} />
+                  <Box className="hero-moment-photo" component="img" src={bpkninestrainingmoment4} alt="BPKNines Training Moment" loading="lazy" decoding="async" sx={{ display: 'block',width: '100%', height:{ xs: '100%', md: '100%' }, objectFit: 'cover', borderRadius: 1,border: '5px solid rgba(0, 0, 0, 0.18)' }} />
+                  <Box className="hero-moment-photo" component="img" src={bpkninestrainingmoment5} alt="BPKNines Training Moment" loading="lazy" decoding="async" sx={{ display: 'block',width: '100%', height:{ xs: '100%', md: '100%' } , objectFit: 'cover', borderRadius: 1,border: '5px solid rgba(0, 0, 0, 0.18)' }} />
                 </Box>
             </Box>
             <Box sx={{ display: {xs:'grid', md:'none'}, gridTemplateColumns: { xs: 'repeat(3, 1fr)', sm: 'repeat(3, 1fr)' }, gap: { xs: 1, md: 2 } }}>
