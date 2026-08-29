@@ -39,7 +39,7 @@ export const siteContent = {
     description:
       'Your training journey starts with understanding behavior, then building simple daily structure that creates calm at home, better walks, and confident handling.',
     note: 'Each stage is guided: assessment, clear practice, real-life proofing, and owner handoff so progress continues long after sessions end.',
-    primaryCta: { label: 'Visit our Camp for FREE Dog Assessment', href: '#book_assessment' },
+    primaryCta: { label: 'FREE Camp Dog Assessment', href: '#book_assessment' },
     secondaryCta: { label: 'See Training Programs', href: '#services' },
     thirdCta: { label: 'Enroll', href: '/enrollment' },
     badges: [
